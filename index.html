@@ -1,11 +1,2277 @@
 <html>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="site.css" type="text/css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-    <div>
+    <style>
+        img:hover
+        {
+            cursor: pointer;
+        }
+
+        .board-game-row{
+            padding-top: 20px;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <!-- <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+          </div> -->
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+              <li><a href="#">Boardgames!</a></li>
+              <!-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li> -->
+            </ul>
+            <!-- <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+            </form> -->
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    
+    <div class="container">
         hello welcome to THE PAGE BRO
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Filter by name">
+                  </div>
+            </div>
+        </div>
+
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/qmIKAcdaUMX4skrH8pX0qBMxijg=/0x0/pic3370214.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>5-Minute Dungeon</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2017</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>5-30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        5-Minute Dungeon is a chaotic, co-operative, real-time card game in which players have only five minutes
+                        to escape the randomized dungeon. Communication and teamwork are critical to survival because there's no
+                        time to form a carefully considered plan &amp;mdash; and no predicting what dangers lie
+                        ahead.<br /><br />In more detail, players assume the role of one of ten heroes, each with special cards
+                        and abilities. Once the five-minute timer starts, the race is on to defeat all the monsters inside the
+                        dungeon. In order to defeat a monster, players must match symbols from their hand with ones on the
+                        monster's card. At the end of each dungeon is a powerful dungeon boss &amp;mdash; and after the first
+                        boss is defeated, the campaign continues to the second boss. Each boss, and each randomized dungeon,
+                        gets harder until players reach the fifth and final boss.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/3DP_RW5lTX0WrV67s8qi8CsiXoQ=/0x0/pic860217.jpg' height='300'
+                    width='300'>
+                <div>
+                    <strong>Name:</strong>7 Wonders</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2010</div>
+                    <div><strong>Players:</strong>2-7</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        You are the leader of one of the 7 great cities of the Ancient World. Gather resources, develop
+                        commercial routes, and affirm your military supremacy. Build your city and erect an architectural wonder
+                        which will transcend future times.<br /><br />7 Wonders lasts three ages. In each age, players receive
+                        seven cards from a particular deck, choose one of those cards, then pass the remainder to an adjacent
+                        player. Players reveal their cards simultaneously, paying resources if needed or collecting resources or
+                        interacting with other players in various ways. (Players have individual boards with special powers on
+                        which to organize their cards, and the boards are double-sided). Each player then chooses another card
+                        from the deck they were passed, and the process repeats until players have six cards in play from that
+                        age. After three ages, the game ends.<br /><br />In essence, 7 Wonders is a card development game. Some
+                        cards have immediate effects, while others provide bonuses or upgrades later in the game. Some cards
+                        provide discounts on future purchases. Some provide military strength to overpower your neighbors and
+                        others give nothing but victory points. Each card is played immediately after being drafted, so you'll
+                        know which cards your neighbor is receiving and how his choices might affect what you've already built
+                        up. Cards are passed left-right-left over the three ages, so you need to keep an eye on the neighbors in
+                        both directions.<br /><br />Though the box of earlier editions is listed as being for 3&amp;ndash;7
+                        players, there is an official 2-player variant included in the instructions.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/4OvUz1IRq3mkYbXD47WnUwg3sLI=/0x0/pic2527529.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Anomia</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2010</div>
+                    <div><strong>Players:</strong>3-6</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Anomia plays off the fact that our minds are positively brimming with all sorts of random information:
+                        things to eat, pop songs, websites, etc... Sure, under normal circumstances, it's easy to give an
+                        example of a frozen food or a dog breed, but you'll find that your brain works a little differently
+                        under pressure!<br /><br />To play, draw and reveal a card from the center pile. Does the symbol on your
+                        card match one on another player's card? If so, you must quickly face-off with the other player by
+                        giving an example of the person, place, or thing on their card before they can do the same for yours. If
+                        you blurt out a correct answer first, you win their card and the drawing continues.<br /><br />Sounds
+                        simple, right? Wrong! Wild cards allow non-matching symbols to match, increasing the number of things to
+                        which you must pay attention. Cascading face-offs can occur when you hand over a lost card, thereby
+                        revealing a new top card on your play pile.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/9-SR48jyfxs4At6255sjHoly2sw=/0x0/pic3718275.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Azul</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2017</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>30-45</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Introduced by the Moors, azulejos (originally white and blue ceramic tiles) were fully embraced by the
+                        Portuguese when their king Manuel I, on a visit to the Alhambra palace in Southern Spain, was mesmerized
+                        by the stunning beauty of the Moorish decorative tiles. The king, awestruck by the interior beauty of
+                        the Alhambra, immediately ordered that his own palace in Portugal be decorated with similar wall tiles.
+                        As a tile-laying artist, you have been challenged to embellish the walls of the Royal Palace of
+                        Evora.<br /><br />In the game Azul, players take turns drafting colored tiles from suppliers to their
+                        player board. Later in the round, players score points based on how they've placed their tiles to
+                        decorate the palace. Extra points are scored for specific patterns and completing sets; wasted supplies
+                        harm the player's score. The player with the most points at the end of the game wins.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/YkEZH0195Gs84brLmF8EPEtZFl4=/0x0/pic2463443.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Bananagrams</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2006</div>
+                    <div><strong>Players:</strong>1-8</div>
+                    <div><strong>Time:</strong>15</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Bananagrams is a fast and fun word game that requires no pencil, paper or board, and the tiles come in a
+                        fabric banana-shaped carrying pouch. One hand can be played in as little as five minutes. Much like Pick
+                        Two!, but without the letter values.<br /><br />Using a selection of 144 plastic letter tiles in the
+                        English edition, each player works independently to create their own 'crossword' faster than one's
+                        opponents. When a player uses up all their letters, all players take a new tile from the pool. The
+                        object of the game is to be the first to complete a word grid after the &amp;quot;bunch&amp;quot; of
+                        tiles has been depleted.<br /><br />There are variants included in the instructions, such as Banana
+                        Smoothie and Banana cafe for limited set skills or space-deprived places, and the game is suitable for
+                        solo play.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/FV0kpzyWF-7AQCFI8TuQlRRIhNo=/0x0/pic2909713.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>BANG! The Dice Game</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2013</div>
+                    <div><strong>Players:</strong>3-8</div>
+                    <div><strong>Time:</strong>15</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In the U.S. wild west, the eternal battle between the law and the outlaws keeps heating up. Suddenly, a
+                        rain of arrows darken the sky: It's an Indian attack! Are you bold enough to keep up with the Indians?
+                        Do you have the courage to challenge your fate? Can you expose and defeat the ruthless gunmen around
+                        you?<br /><br />BANG! The Dice Game keeps the core of the Bang! card game in place. At the start of the
+                        game, players each take a role card that secretly places them on a team: the Sheriff and deputies,
+                        outlaws, and renegades. The Sheriff and deputies need to kill the outlaws, the outlaws win by killing
+                        the Sheriff, and the renegades want to be the last players alive in the game.<br /><br />Each player
+                        also receives a character card which grants him a special power in the game. The Sheriff reveals his
+                        role card and takes the first turn of the game. On a turn, a player can roll the five dice up to three
+                        times, using the results of the dice to shoot neighboring players, increase the range of his shots, heal
+                        his (or anyone else's) life points, or put him in range of the Indians, which are represented by nine
+                        tokens in the center of the table. Each time a player rolls an arrow, he takes one of these tokens; when
+                        the final token is taken, each player loses one life point for each token he holds, then the tokens are
+                        returned to the center of the table.<br /><br />If a player collects a trio of Gatling symbols on the
+                        dice, he fires one shot at everyone else and rids himself of Indian tokens. Who'll get his shot off
+                        first? Play continues until one team meets its winning condition &amp;ndash; and death won't necessarily
+                        keep you from winning as long as your teammates pull through!<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/M8RC6Tkx9VAxPWzOXibeiZY5Fuo=/0x0/pic3231155.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Bears vs Babies</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2017</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>15-20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Bears vs Babies is a card game in which you build handsome, incredible monsters who go to war with
+                        horrible, awful babies.<br /><br />The shared deck of cards consists of bear parts (and other monster
+                        parts) and baby cards. When you draw a part, you use it to build a monster for yourself; when you draw a
+                        baby, it goes in the center of the table. When babies are provoked, they attack, and anyone who has
+                        fewer monster parts than the number of attacking babies loses their monster; everyone with more parts
+                        than babies defeats this infantile army and scores.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/U9FGhiyJR7_TM4IPQogUjbcoPmQ=/0x0/pic5146864.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Betrayal at House on the Hill</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2004</div>
+                    <div><strong>Players:</strong>3-6</div>
+                    <div><strong>Time:</strong>60</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        From the press release:<br /><br />Betrayal at House on the Hill quickly builds suspense and excitement
+                        as players explore a haunted mansion of their own design, encountering spirits and frightening omens
+                        that foretell their fate. With an estimated one hour playing time, Betrayal at House on the Hill is
+                        ideal for parties, family gatherings or casual fun with friends.<br /><br />Betrayal at House on the
+                        Hill is a tile game that allows players to build their own haunted house room by room, tile by tile,
+                        creating a new thrilling game board every time. The game is designed for three to six people, each of
+                        whom plays one of six possible characters.<br /><br />Secretly, one of the characters betrays the rest
+                        of the party, and the innocent members of the party must defeat the traitor in their midst before
+                        it&amp;rsquo;s too late! Betrayal at House on the Hill will appeal to any game player who enjoys a fun,
+                        suspenseful, and strategic game.<br /><br />Betrayal at House on the Hill includes detailed game pieces,
+                        including character cards, pre-painted plastic figures, and special tokens, all of which help create a
+                        spooky atmosphere and streamline game play.<br /><br />An updated reprint of Betrayal at House on the
+                        Hill was released on October 5, 2010.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/t0e2TEGndNA10ZxCMzEQTf0hoAs=/0x0/pic3136189.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>The Blood of an Englishman</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>2</div>
+                    <div><strong>Time:</strong>20-30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        &amp;quot;Fee Fi Fo Fum! I smell the blood of an Englishman!&amp;quot; roared the giant as he crashed
+                        through the vines. Jack, with one arm around his precious stolen harp and the other grasping the
+                        beanstalk, felt the rush of danger. Will he make it to the bottom in time to chop down the leafy ladder,
+                        or will the giant successfully catch the thieving beggar?<br /><br />In The Blood of an Englishman,
+                        players take on the role of either Jack or the Giant. The Giant must maneuver the Fee Fi Fo and Fum
+                        cards while Jack tries to create three beanstalks to steal the bag of gold, the Golden Goose, and the
+                        Singing Harp. Each player has different available actions and must carefully arrange the cards to
+                        achieve their goal. Are you brave enough to face your fate?<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/Ir_CQEPbiQ5gn-Eds66UER32vL4=/0x0/pic318943.jpg' height='300'
+                    width='300'>
+                <div>
+                    <strong>Name:</strong>Boggle</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>1972</div>
+                    <div><strong>Players:</strong>1-8</div>
+                    <div><strong>Time:</strong>10</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Boggle is a timed word game in which players have 3 minutes to find as many connected words as possible
+                        from the face up letters resting in a 16 cube grid. When the timer runs out, players compare their lists
+                        of words and remove any words found by multiple players. Points are then awarded for remaining words,
+                        depending on how many letters are in the word. (In the original Boggle, all words must contain 3 or more
+                        letters to score points.)<br /><br />An example grid given in the French Canadian rules (of Deluxe
+                        Boggle) holds an amazing 459 words!<br /><br />A number of variants have been produced by Parker
+                        Brothers over time, including Big Boggle (which uses a 5&amp;times;5 grid of letters and forces players
+                        to search for longer words).<br /><br />Boggle is a word dice game.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/W9smhI1Alsx2-eTkkiS88JZbA_s=/0x0/pic4719493.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Bubble Tea</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>1-5</div>
+                    <div><strong>Time:</strong>20-0</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Welcome to the most popular bubble tea shop in Taiwan where you'll find drinks flavored like rich milk
+                        tea with a chewy texture and unforgettable good taste!<br /><br />To make an unforgettable bubble tea,
+                        you need to pay attention to crucial elements like having more bubbles and less sugar; even your method
+                        for adding ice will make the drink taste differently. Sounds good, right? If you can't wait to make your
+                        own, let us shake it!<br /><br />In Bubble Tea, each player has two cards called cups and nine bubble
+                        tea ingredient cards. One player uses the shaker to shake out which ingredients will be needed this
+                        game, and whoever assembles these ingredients the quickest wins the game and gets the
+                        rewards!<br /><br />Bubble Tea is a table game which improves your quickness and reaction time. In
+                        Bubble Tea, players have to roll 6 dice by the real shaker and using 9 plastic cards to match pictures
+                        which shown on dice. The player who finds the correct combination first gets a Customer Card. Whoever
+                        gets 3 Customer Cards in the end wins the game and becomes the master of BUBBLE TEA!<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/lzdR0x7pTyFziEfK8o3bZOsYQhM=/0x0/pic3661032.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Catan Dice Game</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2007</div>
+                    <div><strong>Players:</strong>1-4</div>
+                    <div><strong>Time:</strong>15</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Like all the other games of the &amp;quot;Settlers of Catan&amp;quot; series, this game is about
+                        building settlements, roads, cities and hiring knights. This time, there is no board on which to place
+                        little figures: Every player has his own score card called the building sheet, which depicts a mini
+                        Catan (compare with Die Siedler von Catan: Paper &amp; Pencil). You build by drawing the settlements and
+                        roads on your score card.<br /><br />To build you still require resources. These are collected by a
+                        Yahtzee-like mechanism that involves throwing six special dice (depicting the different resource
+                        symbols) up to three times. After each roll, the player can select which dice to keep and which to roll
+                        again. In the end, he may build using the thusly determined resources, and is awarded victory points for
+                        any finished buildings, which are recorded on the score card.<br /><br />The game lasts fifteen turns or
+                        about 15-30 minutes, after which the player with the most victory points wins.<br /><br />Note that the
+                        game has been designed for 1-4 players, meaning there is a solitaire version of the game, as
+                        well.<br /><br />Recent versions include double-sided map sheets and instructions for Les Colons de
+                        Catane: Le jeu de dés.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/choLq0WEL544ZQlDBlnhQ2x1h9w=/0x0/pic1322957.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Compounded</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2013</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>30-90</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Compounded is a game about building chemical compounds through careful management of elements, a fair
+                        bit of social play and trading, and just a bit of luck. In Compounded, players take on the roles of lab
+                        managers, hastily competing to complete the most compounds before they are completed by others
+                        &amp;ndash; or destroyed in an explosion. Some compounds are flammable and will grow more and more
+                        volatile over time; take too long to gather the necessary elements for those compounds and a lot of hard
+                        work will soon be scattered across the lab.<br /><br />Although Compounded does involve a fair share of
+                        press-your-luck tension and certainly some strategic planning, the most successful scientists will often
+                        be those who strike a good trade with their fellow lab mates. Players are able to freely trade elements,
+                        laboratory tools, and even favors &amp;ndash; if there is truly honor among chemists!<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/m74nctbYaqTy03r8s_i_KTyvbYQ=/0x0/pic3483909.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Dixit</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2008</div>
+                    <div><strong>Players:</strong>3-6</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        2010 Spiel des Jahres Winner<br /><br />One player is the storyteller for the turn and looks at the
+                        images on the 6 cards in her hand. From one of these, she makes up a sentence and says it out loud
+                        (without showing the card to the other players).<br /><br />Each other player selects the card in their
+                        hands which best matches the sentence and gives the selected card to the storyteller, without showing it
+                        to the others.<br /><br />The storyteller shuffles her card with all the received cards. All pictures
+                        are shown face up and every player has to bet upon which picture was the storyteller's.<br /><br />If
+                        nobody or everybody finds the correct card, the storyteller scores 0, and each of the other players
+                        scores 2. Otherwise the storyteller and whoever found the correct answer score 3. Players score 1 point
+                        for every vote for their own card.<br /><br />The game ends when the deck is empty or if a player scores
+                        30 points. In either case, the player with the most points wins the game.<br /><br />The base game and
+                        all expansions have 84 cards each.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/lV6ANM_m30Y5AnzjRFK7xKmKbrE=/0x0/pic4200390.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Dragoon</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>30-60</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        You and your fellow dragons have lived peacefully on your island...until now. The invasion of humans has
+                        awakened your instincts to dominate and hoard as much gold as you can get your claws
+                        on!<br /><br />Dragoon is an action strategy game with an ever-changing landscape. Village and city
+                        tiles populate the map each round using a coordinate system. During your turn, choose between claiming
+                        villages and cities that pay you tribute, or destroying them out right for instant gold. Challenge other
+                        players in dragon-to-dragon combat before they lay waste to your empire or enter your cave to steal your
+                        riches. You&amp;rsquo;re never out of the game until the last gold coin is snatched up!<br /><br />When
+                        game night strikes with a mixed experience group, Dragoon is quick to learn and get started. Gaming vets
+                        and newcomers alike can have fun competing as 2-4 playable dragons.&amp;quot;<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/iPlI0qufM7kXjYE44nYQVMMaIJ0=/0x0/pic2411495.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Dungeon Fighter</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2011</div>
+                    <div><strong>Players:</strong>1-6</div>
+                    <div><strong>Time:</strong>45-60</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Explore spooky dungeons, find glorious treasure, buy powerful magic items, and challenge the most
+                        horrible creatures. Will your party be able to defeat the final boss?<br /><br />In Dungeon Fighter, a
+                        fully cooperative board game, players take on the roles of heroes venturing deep into a three-tier
+                        dungeon. Along the way, they explore the dungeon, search its many rooms, and face endless hordes of
+                        vicious monsters. Best of all, your skill determines the ability of your character. Can you kill Medusa
+                        without looking into her eyes, defeat the Minotaur in the labyrinth, or resist the breath of the dragon?
+                        Will you be able to hit a target by throwing the dice under your leg with your eyes
+                        closed?<br /><br />You will feel truly part of a centuries-old battle between good and evil...with a
+                        touch of foolish stupidity.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/kos_B_dg6a0wPzyC8tu8lCZIk6w=/0x0/pic4295989.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Dungeon Mayhem</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2018</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>10</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In the action-packed Dungeons &amp;amp; Dragons card game Dungeon Mayhem, you win by being the last
+                        adventurer standing.<br /><br />Play as one of four brave, quirky characters &amp;mdash; barbarian,
+                        paladin, rogue, or wizard &amp;mdash; battling it out in a dungeon full of treasure! With magic missiles
+                        flinging, dual daggers slinging, and spiked shields dinging, it's up to you to prove your adventurer has
+                        the guts to bring home the glory!<br /><br />Illustrations created by Kyle Ferrin in the four decks of
+                        cards represent Sutha the Skullcrusher (barbarian), Azzan the Mystic (wizard), Lia the Radiant
+                        (paladin), and Oriax the Clever (rogue). Pick one of these characters and play their mighty power cards
+                        such as Azzan's Vampiric Touch to swap hit points with an opponent or Sutha's Whirling Axes to heal
+                        yourself while dealing crushing damage to the rest of the party.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/X9Q8mOqv5BHNWhogsAeYbr2_OIM=/0x0/pic1998857.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Dungeon!</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>1975</div>
+                    <div><strong>Players:</strong>1-8</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In many ways Dungeon! is similar to Dungeons &amp;amp; Dragons, although much simplified and transformed
+                        into a board game. Players explore a dungeon that is divided into levels of increasing difficulty,
+                        fighting monsters for valuable treasure. As players venture deeper into the dungeon, the monsters become
+                        more difficult and the treasure more valuable. Several character classes each have slightly different
+                        fighting abilities &amp;ndash; most notably the wizard, who can cast spells. Combat is simulated using
+                        dice; players roll the dice to attack a monster, and if unsuccessful, the dice are rolled to determine
+                        the effect of the monster's counter-attack.<br /><br />The winner is the first player to bring a certain
+                        amount of treasure back to the Dungeon's entrance.<br /><br />Reimplemented by:<br /><br /><br /> The
+                        Classic Dungeon<br /> The New Dungeon<br /><br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/POOq_K8TtWx2jaqgzU_TEKu18oY=/0x0/pic3148756.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Dungeons &amp; Dragons: Rock Paper Wizard</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>3-6</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In Dungeons &amp;amp; Dragons: Rock Paper Wizard, the dragon has been slain, leaving behind a treasure
+                        over which to fight, and the players are wizards who are fighting to claim the most gold from the
+                        dragon's pile.<br /><br />The players have a shared &amp;quot;spellbook&amp;quot; of cards depicting
+                        various well-known D&amp;amp;D spells, and each card shows a unique hand gesture that the player must
+                        make to cast, while pointing at another player as the target of the spell. All players choose their
+                        spells simultaneously, and the spells can move the wizards closer or farther away from the treasure or
+                        affect the game state in other ways as well. It's a game of second-guessing, satisfying successes, and
+                        agonizing reversals as each spell cast potentially affects the outcomes of the following
+                        ones!<br /><br />The first player to grab 25 gold pieces from the hoard wins.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/ZlF431r__1tfh7pbisk5qbFs7L8=/0x0/pic4411191.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Dungeons &amp; Dragons: Rock Paper Wizard – Fistful of Monsters</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2018</div>
+                    <div><strong>Players:</strong>3-6</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Encounter all your favorite classic D&amp;amp;D creatures, such as mimics, umber hulks, and beholders,
+                        in Rock Paper Wizard &amp;ndash; Fistful of Monsters.<br /><br />In this expansion for Rock Paper
+                        Wizard, a new threat has entered the mix: the wandering monster. Each wandering monster has its own
+                        unique ability that's capable of forcing a wizard to move around the board, lose gold, or even take an
+                        injury token.<br /><br />Wizards aren't totally defenseless, however. A stack of magical items, such as
+                        a Ring of Spell Storing and Wand of Fireballs, is located at the entrance to the cave. Use these in
+                        combination with spells to avoid the wandering monster and move into a scoring position while gaining
+                        the fewest injury tokens. If you don't, you're going to have the pay the cleric a sack of gold to heal
+                        you!<br /><br />Fistful of Monsters has a deeper box than the base game, which is required for play, so
+                        that you can store everything in one box.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/6u_XyVwL_A3G3_WKiGacIaDv2GY=/0x0/pic3662096.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Encounters: Shadowrun</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>1-8</div>
+                    <div><strong>Time:</strong>15-30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        The year is 2078. The worlds&amp;rsquo; megacorporations straddle the sprawls of the Sixth World,
+                        goliaths that intimidate even nations as they suck in souls in their drive for the almighty nuyen.
+                        Between the cracks, shadowrunners carve out a living as deniable and disposable assets that megacorps
+                        fire at each other for datasteals, personnel extractions, or even wetwork. Whether casting manabolts of
+                        magic, riding the electrons of the Matrix with just the brain, or slinging good, old-fashioned flying
+                        lead while firing at speed enhanced by the latest in bio-engineering, runners live dangerously and hope
+                        their skills are good enough to let them survive another day.<br /><br />Encounters: Shadowrun is a 1-8
+                        player fast-paced, pushed-your-luck dice and card game. Players take the role of Mr. Johnson, arranging
+                        the megacorps&amp;rsquo; dirty work and adding new shadowrunners to their already-assembled teams. They
+                        send their teams into the shadows of the mean sprawl streets of the Sixth World, collecting though
+                        paydata to beat down their rivals. Grab some dice, make a team, and show &amp;rsquo;em who&amp;rsquo;s
+                        the boss.<br /><br />The goal of the game is to be the first player to acquire &amp;yen;30. <br />Each
+                        player starts the game with (1) runner and 6 dice. At the start of your turn you flip over location
+                        card, that has effects aka breaks the rules, on every turn until a new environment card comes into play.
+                        You then flip over the top Event card form the deck and try and roll an exact match of the number on the
+                        card. If you succeed you place a die on the. You could stop then and receive &amp;yen;1 or flip a card
+                        and continue to press your luck. If you fail the next player starts a new run with a chance to collect n
+                        the &amp;yen; you forfeited.<br /><br />&amp;yen; are used as victory points as well as currency to buy
+                        additional runners.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/T0PWZLfXOtJMAfZD7kAiD6xsDZE=/0x0/pic1170265.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Epic Spell Wars of the Battle Wizards: Duel at Mt. Skullzfyre</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2012</div>
+                    <div><strong>Players:</strong>2-6</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Game description from the publisher:<br /><br />Did you know that magical wizards are battling to the
+                        death ... and beyond ... right now!? &amp;quot;Why battle?&amp;quot; you might ask. &amp;quot;What have
+                        I got to prove, magic man?&amp;quot; Only who's the most awesomely powerful battle wizard in the entire
+                        realm, that's what! As a Battle Wizard, you'll put together up to three spell components to craft
+                        millions (okay, not really) of spell combos. Your spells might kick ass, or they could totally blow
+                        &amp;ndash; it's up to you to master the magic. You will unleash massive damage on the faces of your
+                        wizard rivals in a no-holds-barred, all-out burn-down to be the last Battle Wizard standing. And it
+                        doesn't stop there! Powerful magic items bring on a whole new level of bloody carnage as you and your
+                        mighty wizard opponents tear each other limb from limb in an orgy of killing! Do you have what it takes
+                        to use epic spells in a war at Mt. Skullzfyre? Will YOU be the Ultimate Battle Wizard!?!<br /><br />Epic
+                        Spell Wars of the Battle Wizards: Duel at Mt. Skullzfyre is a humorous card game depicting a vicious,
+                        over-the-top battle between a variety of comically illustrated wizards. The game focuses primarily on
+                        creating three-part spell combos to blast your foes into the afterlife. The unique Dead Wizard cards
+                        allow players to stay in the game even after their wizards have been defeated.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/XW9wAqKOy8kvH6TqxtuwAdFuAoo=/0x0/pic2691976.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Exploding Kittens</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2015</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>15</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Exploding Kittens is a kitty-powered version of Russian Roulette. Players take turns drawing cards until
+                        someone draws an exploding kitten and loses the game. The deck is made up of cards that let you avoid
+                        exploding by peeking at cards before you draw, forcing your opponent to draw multiple cards, or
+                        shuffling the deck.<br /><br />The game gets more and more intense with each card you draw because fewer
+                        cards left in the deck means a greater chance of drawing the kitten and exploding in a fiery ball of
+                        feline hyperbole.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/jOlEGT4WWuCOaUtvyz0jNrVhni0=/0x0/pic2815278.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Exploding Kittens: NSFW Deck</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2015</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>10-20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Originally an expansion for Exploding Kittens, the most successful Kickstarer project ever, that
+                        contained cards that were too horrific and/or incredible to be included in a kid safe version. As a
+                        stretch goal this was turned into a stand alone game that can be combined with the standard Exploding
+                        Kittens deck. If you combine the two decks, you can go up to 9 players. 10 with Imploding
+                        Kittens<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/Gcf1Q_RVCGCN2FN3edPDv-ySJ1o=/0x0/pic2405641.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Fluxx</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>1997</div>
+                    <div><strong>Players:</strong>2-6</div>
+                    <div><strong>Time:</strong>5-30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Fluxx is a card game in which the cards themselves determine the current rules of the game. By playing
+                        cards, you change numerous aspects of the game: how to draw cards, how to play cards, and even how to
+                        win.<br /><br />At the start of the game, each player holds three cards and on a turn a player draws one
+                        card, then plays one card. By playing cards, you can put new rules into play that change numerous
+                        aspects of the game: how many cards to draw or play, how many cards you can hold in hand or keep on the
+                        table in front of you, and (most importantly) how to win the game. There are many editions, themed
+                        siblings, and promo cards available.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/GxHuu04GdLw8PAnt9SOYRU5gR1A=/0x0/pic646458.jpg' height='300'
+                    width='300'>
+                <div>
+                    <strong>Name:</strong>Forbidden Island</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2010</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Forbidden Island is a visually stunning cooperative board game. Instead of winning by competing with
+                        other players like most games, everyone must work together to win the game. Players take turns moving
+                        their pawns around the 'island', which is built by arranging the many beautifully screen-printed tiles
+                        before play begins. As the game progresses, more and more island tiles sink, becoming unavailable, and
+                        the pace increases. Players use strategies to keep the island from sinking, while trying to collect
+                        treasures and items. As the water level rises, it gets more difficult- sacrifices must be
+                        made.<br /><br />What causes this game to truly stand out among co-op and competitive games alike is the
+                        extreme detail that has been paid to the physical components of the game. It comes in a sturdy and
+                        organized tin of good shelf storage size. The plastic treasure pieces and wooden pawns are well crafted
+                        and they fit just right into the box. The cards are durable, well printed, and easy to understand. The
+                        island tiles are the real gem: they are screen-printed with vibrant colors, each with a unique and
+                        pleasing image.<br /><br />With multiple levels of difficulty, different characters to choose from (each
+                        with a special ability of their own), many optional island formats and game variations available,
+                        Forbidden Island has huge replay value. The game can be played by as few as two players and up to four
+                        (though it can accommodate five). More players translates into a faster and more difficult game, though
+                        the extra help can make all the difference. This is a fun game, tricky for players of almost any age.
+                        Selling for under twenty dollars, oddly, Forbidden Island is a rare game of both quality and affordable
+                        price.<br /> For those who enjoy Forbidden Island, a follow-up project by Gamewright titled Forbidden
+                        Desert was released in 2013.<br /><br />From the publisher's website:<br /><br />Dare to discover
+                        Forbidden Island! Join a team of fearless adventurers on a do-or-die mission to capture four sacred
+                        treasures from the ruins of this perilous paradise. Your team will have to work together and make some
+                        pulse-pounding maneuvers, as the island will sink beneath every step! Race to collect the treasures and
+                        make a triumphant escape before you are swallowed into the watery abyss!<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/KKGrpUbYP7Bfda7gzbc6O85Ee-k=/0x0/pic4684897.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Goat Lords</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>3-6</div>
+                    <div><strong>Time:</strong>30-0</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        A competitive card game about thieves, monsters, magic, bombs, and mostly goats.<br /><br />The goal of
+                        Goat Lords is to gather the biggest goat herd. You do so by stacking pairs of matching goat cards in
+                        front of you and stealing opponent's goats before the draw pile runs out.<br /><br />Knowing how to play
+                        your cards, when to hold 'em, and who to attack greatly affect how many points you end up when the last
+                        goat is played.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/7_qWC5F5DdSXCpmADUDUsuW9mNg=/0x0/pic3719610.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>The Grizzled</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2015</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        The Grizzled is a cooperative game about survival in the trenches during the first World War where
+                        players win or lose together.<br /><br />Each round, the current team leader will choose how many cards
+                        every player draws. Then, going around the table, players must either play a card in their hand or back
+                        out of the mission. Each card represents either threats to the team (such as mortar shells and weather
+                        conditions) or negative personality traits (such as frightened or obsessive). At the end of the round,
+                        more cards are added to the draw deck. The game ends only if the players can deplete the draw deck as
+                        well as their hands without letting time run out.<br /><br />If one threat shows up too many times, the
+                        team fails the mission. The team must play their threats correctly in order to gain any progress.
+                        However, most of the information in a players hand remains secret throughout the
+                        game.<br /><br />Planning, teamwork, and a little luck are the tools you'll need to win this cooperative
+                        game for two to five players.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/Wkrf8z3pMlOFKwxafbw9-Ob404s=/0x0/pic2007286.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Hanabi</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2010</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>25</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Hanabi&amp;mdash;named for the Japanese word for &amp;quot;fireworks&amp;quot;&amp;mdash;is a
+                        cooperative game in which players try to create the perfect fireworks show by placing the cards on the
+                        table in the right order. (In Japanese, hanabi is written as 花火; these are the ideograms flower and
+                        fire, respectively.)<br /><br />The card deck consists of five different colors of cards, numbered
+                        1&amp;ndash;5 in each color. For each color, the players try to place a row in the correct order from
+                        1&amp;ndash;5. Sounds easy, right? Well, not quite, as in this game you hold your cards so that they're
+                        visible only to other players. To assist other players in playing a card, you must give them hints
+                        regarding the numbers or the colors of their cards. Players must act as a team to avoid errors and to
+                        finish the fireworks display before they run out of cards.<br /><br />An extra suit of cards, rainbow
+                        colored, is also provided for advanced or variant play.<br /><br />Hanabi was originally published as
+                        part of Hanabi &amp; Ikebana.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/-6b6hFJ3z-MUfcj5IKO-6WrgnA0=/0x0/pic2649408.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Hanafuda</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>1701</div>
+                    <div><strong>Players:</strong>2-7</div>
+                    <div><strong>Time:</strong>60</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Hanafuda cards originated in beginning of 18th-century Japan. <br />Legend says stewards of Edo
+                        Shogunate created it from Portuguese playing cards.<br /><br />A deck consists of forty-eight cards
+                        divided into twelve suits of four cards each. Each suit represents one of the twelve months of the year
+                        or individual plants (almost all flowers).<br /><br />The cards are small (about 1 x 2 inches), made
+                        from stiff cardboard, and are beautifully illustrated.<br /><br />Many different games can be played
+                        with a Hanafuda deck.<br /><br />The standard game was Hachi-Hachi (Eighty-eight), which resembles the
+                        Western game Casino, but is more complicated and subtle. The standard game now is
+                        Koi-Koi.<br /><br />Re-implemented by:<br /><br /> Go Stop, the game using Hwatu (화투, 花闘), Korean
+                        Hanafuda.<br /><br /><br /><br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/bcz58Z91B9WLK56AXyEjW2imfMk=/0x0/pic1299877.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Hive Pocket</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2010</div>
+                    <div><strong>Players:</strong>2</div>
+                    <div><strong>Time:</strong>20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Hive is a highly addictive strategic game for two players that is not restricted by a board and can be
+                        played anywhere on any flat surface. The base game of Hive is made up of twenty two pieces, eleven black
+                        and eleven white, resembling a variety of creatures each with a unique way of moving. Hive Carbon and
+                        Hive Pocket include the Mosquito and Ladybug expansions, for a total of 26 pieces.<br /><br />With no
+                        setting up to do, the game begins when the first piece is placed down. As the subsequent pieces are
+                        placed this forms a pattern that becomes the playing surface (the pieces themselves become the board).
+                        Unlike other such games, the pieces are never eliminated and not all have to be played. The object of
+                        the game is to totally surround your opponent's queen, while at the same time trying to block your
+                        opponent from doing likewise to your queen. The first player to totally surround his opponent's queen
+                        wins the game.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/oGKxUavbTR49i-P6O-WUyBfuRYs=/0x0/pic4848330.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Horrified</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2019</div>
+                    <div><strong>Players:</strong>1-5</div>
+                    <div><strong>Time:</strong>60</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        The stakes have been raised. Imagine living in a place so wretched that it's not plagued by one, two, or
+                        even three monsters &amp;mdash; but seven of the most horrifying fiends!<br /><br />In this game, you'll
+                        come face to face with them all as you work together to rid the town of the maniacal or misunderstood
+                        creatures&amp;hellip;before it's too late.<br /><br />Horrified includes high-quality sculpted
+                        miniatures (Frankenstein, The Bride of Frankenstein, The Wolf Man, Dracula, The Mummy, The Invisible
+                        Man, Creature from the Black Lagoon). Its innovative, easy-to-learn, cooperative gameplay has players
+                        working together against the monsters with varying levels of difficulty. Just as each monster is unique,
+                        they require different strategies and tactics to be defeated.<br /><br />&amp;mdash;description from the
+                        publisher<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/-Sn2uok1QiL3a46_CUpDVqYz6WE=/0x0/pic268047.jpg' height='300'
+                    width='300'>
+                <div>
+                    <strong>Name:</strong>Jacks</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>0</div>
+                    <div><strong>Players:</strong>2</div>
+                    <div><strong>Time:</strong>1</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Played with 10 &amp;quot;jacks&amp;quot; and a small rubber ball. Players take turns. On a player's
+                        turn, he must first throw the jacks onto the floor. If any of the jacks land so that they are stacked on
+                        top of each other, he forfeits his turn. Otherwise, he begins to pick the jacks up in groups. He throws
+                        the ball up in the air, and must pick up a group and catch the ball after exactly one bounce. A player
+                        must first succeed in picking up all 10 jacks one at a time in a single turn. Then he attempts to pick
+                        up the jacks two at a time, then in groups of three, and continuing on until he must pick up all 10
+                        jacks in one group. If at any time, the player picks up the wrong number of jacks, touches any jacks not
+                        in the group, or fails to catch the ball, his turn is over. On his next turn, he will try again,
+                        starting with the same grouping.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/oSMirTNRZpn6QAXpDLDrGixCyAY=/0x0/pic5100947.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Jaipur</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2009</div>
+                    <div><strong>Players:</strong>2</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        You are one of the two most powerful traders in the city of Jaipur, the capital of Rajasthan, but that's
+                        not enough for you because only the merchant with two &amp;quot;seals of excellence&amp;quot; will have
+                        the privilege of being invited to the Maharaja's court. You are therefore going to have to do better
+                        than your direct competitor by buying, exchanging, and selling at better prices, all while keeping an
+                        eye on both your camel herds.<br /><br />Jaipur is a fast-paced card game, a blend of tactics, risk and
+                        luck. On your turn, you can either take or sell cards. If you take cards, you have to choose between
+                        taking all the camels, taking one card from the market, or swapping 2-5 cards between the market and
+                        your cards.<br /><br />If you sell cards, you get to sell only one type of good, and you receive as many
+                        chips for that good as the number of cards you sold. The chips' values decrease as the game progresses,
+                        so you'd better hurry! On the other hand, you receive increasingly high rewards for selling three, four,
+                        or five cards of the same good at a time, so you'd better wait!<br /><br />You can't sell camels, but
+                        they're paramount for trading and they're also worth a little something at the end of the round, enough
+                        sometimes to secure the win, so you have to use them smartly.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/tGqe2tlL9xshH6jCXF0XqTx63AU=/0x0/pic4581181.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Jaws</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2019</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>60</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In JAWS, one player takes on the role of the killer shark off Amity Island, while the other 1-3 players
+                        take on the roles of Brody, Hooper and Quint to hunt the shark. Character and event cards define player
+                        abilities and create game actions for humans and the shark. Gameplay is divided into two acts
+                        &amp;mdash; Amity Island and The Orca &amp;mdash; played on a double-sided board to replicate the film's
+                        story:<br /><br /><br /> In the Amity Island phase, the shark menaces swimmers and avoids capture. Other
+                        players attempt to pinpoint the shark's location and save swimmers from shark attacks.<br /> In the Orca
+                        phase, played on the reverse side of the game board, Brody, Hooper and Quint are aboard the sinking ship
+                        engaging in a climactic battle against the shark, while using additional action and strategy cards to
+                        defend the Orca from targeted shark attacks.<br /><br /><br />If humans kill the shark, they win; if the
+                        shark attack on the Orca succeeds, the great white shark wins.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/PhTRgPh-gKWABgGG00TZjRUOvPg=/0x0/pic1274349.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Kalah</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>700</div>
+                    <div><strong>Players:</strong>2</div>
+                    <div><strong>Time:</strong>10</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Mancala is a whole family of games.<br /><br />This entry is referencing only the popular game also
+                        known as Kalah, invented in the 1940 by William Champion Jr..<br /><br />The game is played on a board
+                        of two rows, each consisting of six round pits. The rows have a large store at either end called kalah.
+                        <br />A player owns the six pits closest to him and the kalah on his right side. <br />Beginners may
+                        start with 3 seeds in each pit, but the game becomes more and more challenging by starting with 4, 5 or
+                        up to 6 seeds in each pit. Today, 4 seeds per pit has become the most common variant, but Champion
+                        recommended the expert game with 6.<br /><br />A player takes all the seeds from one of his pits, they
+                        are distributed one by one, counterclockwise, in the pits and the players own kalah, but not into the
+                        opponent's store.<br /><br />If the last seed is dropped into an opponent's pit or a non-empty pit of
+                        the player, the move ends without anything being captured.<br />If the last seed falls into the player's
+                        kalah, he must move again.<br />If the last seed is put into an empty pit owned by the player, he
+                        captures all contents of the opposite pit together with the capturing piece and puts them in his kalah.
+                        If the opposite pit is empty, nothing is captured. A capture ends the move.<br /><br />The game ends
+                        when one player no longer has any seeds in any of his holes. The remaining pieces are captured by his
+                        adversary. The player who has captured most pieces is declared the winner.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/ajEqmO5djVibsC72Ek1citOCJNA=/0x0/pic3043734.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>King of Tokyo</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2011</div>
+                    <div><strong>Players:</strong>2-6</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In King of Tokyo, you play mutant monsters, gigantic robots, and strange aliens&amp;mdash;all of whom
+                        are destroying Tokyo and whacking each other in order to become the one and only King of
+                        Tokyo.<br /><br />At the start of each turn, you roll six dice, which show the following six symbols: 1,
+                        2, or 3 Victory Points, Energy, Heal, and Attack. Over three successive throws, choose whether to keep
+                        or discard each die in order to win victory points, gain energy, restore health, or attack other players
+                        into understanding that Tokyo is YOUR territory.<br /><br />The fiercest player will occupy Tokyo, and
+                        earn extra victory points, but that player can't heal and must face all the other monsters
+                        alone!<br /><br />Top this off with special cards purchased with energy that have a permanent or
+                        temporary effect, such as the growing of a second head which grants you an additional die, body armor,
+                        nova death ray, and more.... and it's one of the most explosive games of the year!<br /><br />In order
+                        to win the game, one must either destroy Tokyo by accumulating 20 victory points, or be the only
+                        surviving monster once the fighting has ended.<br /><br />First Game in the King of Tokyo
+                        series<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/iDSCIiCAd9SQHv3WoYX0QdvDE_0=/0x0/pic3132685.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Kingdomino</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>15-20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In Kingdomino, you are a lord seeking new lands in which to expand your kingdom. You must explore all
+                        the lands, including wheat fields, lakes, and mountains, in order to spot the best plots, while
+                        competing with other lords to acquire them first.<br /><br />The game uses tiles with two sections,
+                        similar to Dominoes. Each turn, each player will select a new domino to connect to their existing
+                        kingdom, making sure at least one of its sides connects to a matching terrain type already in play. The
+                        order of who picks first depends on which tile was previously chosen, with better tiles forcing players
+                        to pick later in the next round. The game ends when each player has completed a 5x5 grid (or failed to
+                        do so), and points are counted based on number of connecting tiles and valuable crown
+                        symbols.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/GuLL8qnP2Kv6cJatUQskLg9Ad0s=/0x0/pic1401448.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Love Letter</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2012</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        All of the eligible young men (and many of the not-so-young) seek to woo the princess of Tempest.
+                        Unfortunately, she has locked herself in the palace, and you must rely on others to take your romantic
+                        letters to her. Will yours reach her first?<br /><br />Love Letter is a game of risk, deduction, and
+                        luck for 2&amp;ndash;4 players. Your goal is to get your love letter into Princess Annette's hands while
+                        deflecting the letters from competing suitors. From a deck with only sixteen cards, each player starts
+                        with only one card in hand; one card is removed from play. On a turn, you draw one card, and play one
+                        card, trying to expose others and knock them from the game. Powerful cards lead to early gains, but make
+                        you a target. Rely on weaker cards for too long, however, and your letter may be tossed in the
+                        fire!<br /><br />Number 4 in the Tempest: Shared World Game Series<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/-0UXAhHj3Q992K_q2lOVDkjgjTo=/0x0/pic4783831.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Machi Koro</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2012</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Welcome to the city of Machi Koro. You've just been elected Mayor. Congrats! Unfortunately the citizens
+                        have some pretty big demands: jobs, a theme park, a couple of cheese factories and maybe even a radio
+                        tower. A tough proposition since the city currently consists of a wheat field, a bakery and a single
+                        die.<br /><br />Armed only with your trusty die and a dream, you must grow Machi Koro into the largest
+                        city in the region. You will need to collect income from developments, build public works, and steal
+                        from your neighbors' coffers. Just make sure they aren't doing the same to you!<br /><br />Machi Koro is
+                        a fast-paced game for 2-4 players. Each player wants to develop the city on their own terms in order to
+                        complete all of the landmarks under construction faster than their rivals. On their turn, each player
+                        rolls one or two dice. If the sum of the dice rolled matches the number of a building that a player
+                        owns, they get the effect of that building; in some cases opponents will also benefit from your dice
+                        (just as you can benefit from theirs). Then, with money in hand a player can build a landmark or a new
+                        building, ideally adding to the wealth of their city on future turns. The first player to construct all
+                        of their landmarks wins!<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/K4qdyQ6JgrpLMnx6n-L6fx155jE=/0x0/pic4747785.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Machi Koro Legacy</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2019</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>30-45</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Machi Koro Legacy features the same gameplay as Machi Koro. You are still rolling dice, you are still
+                        collecting income, and you are still racing to build landmarks &amp;mdash; but then you unlock the
+                        [censored] and you start earning a little extra income by [censored], and then you start to explore the
+                        [censored] and you have to make a choice between [censored] and [censored]. Even if you aren't in
+                        contention to win a given game, you still have [censored] to set up exciting [censored] for the next
+                        one. And then the [paragraph deleted]...<br /><br />Machi Koro Legacy features a ten-game series that
+                        tells a complete story set in the world of Machi Koro in which player choices create a unique gameplay
+                        experience.<br /><br />&amp;mdash;description from the publisher<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/wX-3MGic-uzIqnNeEZcZlWPKwrA=/0x0/pic3268473.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Magic Maze</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2017</div>
+                    <div><strong>Players:</strong>1-8</div>
+                    <div><strong>Time:</strong>15</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Description from the publisher:<br /><br />After being stripped of all their possessions, a mage, a
+                        warrior, an elf, and a dwarf are forced to go rob the local Magic Maze shopping mall for all the
+                        equipment necessary for their next adventure. They agree to map out the labyrinth in its entirety first,
+                        then find each individual&amp;rsquo;s favorite store, and then locate the exit. In order to evade the
+                        surveillance of the guards who eyed their arrival suspiciously, all four will pull off their heists
+                        simultaneously, then dash to the exit. That's the plan anyway&amp;hellip;but can they pull it
+                        off?<br /><br />Magic Maze is a real-time, cooperative game. Each player can control any hero in order
+                        to make that hero perform a very specific action, to which the other players do not have access: Move
+                        north, explore a new area, ride an escalator&amp;hellip; All this requires rigorous cooperation between
+                        the players in order to succeed at moving the heroes prudently. However, you are allowed to communicate
+                        only for short periods during the game; the rest of the time, you must play without giving any visual or
+                        audio cues to each other. If all of the heroes succeed in leaving the shopping mall in the limited time
+                        allotted for the game, each having stolen a very specific item, then everyone wins
+                        together.<br /><br />At the start of the game, you have only three minutes in which to take actions.
+                        Hourglass spaces you encounter along the way give you more time. If the sand timer ever completely runs
+                        out, all players lose the game: Your loitering has aroused suspicion, and the mall security guards nab
+                        you!<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/-6UV1oIzR-DqAyewaSImVThz6ZU=/0x0/pic3979766.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>The Mind</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2018</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>15</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        The Mind is more than just a game. It's an experiment, a journey, a team experience in which you can't
+                        exchange information, yet will become one to defeat all the levels of the game.<br /><br />In more
+                        detail, the deck contains cards numbered 1-100, and during the game you try to complete 12, 10, or 8
+                        levels of play with 2, 3, or 4 players. In a level, each player receives a hand of cards equal to the
+                        number of the level: one card in level 1, two cards in level 2, etc. Collectively you must play these
+                        cards into the center of the table on a single discard pile in ascending order but you cannot
+                        communicate with one another in any way as to which cards you hold. You simply stare into one another's
+                        eyes, and when you feel the time is right, you play your lowest card. If no one holds a card lower than
+                        what you played, great, the game continues! If someone did, all players discard face up all cards lower
+                        than what you played, and you lose one life.<br /><br />You start the game with a number of lives equal
+                        to the number of players. Lose all your lives, and you lose the game. You start with one shuriken as
+                        well, and if everyone wants to use a shuriken, each player discards their lowest card face up, giving
+                        everyone information and getting you closer to completing the level. As you complete levels, you might
+                        receive a reward of a shuriken or an extra life. Complete all the levels, and you win!<br /><br />For an
+                        extra challenge, play The Mind in extreme mode with all played cards going onto the stack face down. You
+                        don't look at the cards played until the end of a level, losing lives at that time for cards played out
+                        of order.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/uAhlCTqgBS7ZobTYUq-yAWFwURg=/0x0/pic3019101.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>One Deck Dungeon</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>1-2</div>
+                    <div><strong>Time:</strong>30-45</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        One Deck Dungeon is a card game &amp;quot;roguelike&amp;quot; &amp;mdash; a dungeon delve that is
+                        different every time, difficult to survive, with a character you build up from scratch. The deck
+                        consists of various foes to combat and other perils from the dungeon. Each card, though, depicts both
+                        the obstacle to overcome and the potential rewards for doing so. When you defeat a card, you claim it as
+                        either experience, an item, or a skill, tucking it under the appropriate side of your character card to
+                        show its benefits.<br /><br />The longer you take exploring the dungeon, the deeper you'll delve, and
+                        the difficulty will scale up quickly! If you make it far enough, you'll have to fight the dungeon boss.
+                        Survive, and you'll be a legend!<br /><br />One Deck Dungeon is designed for 1-2 players. With multiple
+                        sets, you can add more players.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/Q4HHJhMaZxukjypUS81otdLU8cE=/0x0/pic2257657.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Onirim (second edition)</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2014</div>
+                    <div><strong>Players:</strong>1-2</div>
+                    <div><strong>Time:</strong>15</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        You are a Dreamwalker, lost in a mysterious labyrinth, and you must discover the oneiric doors before
+                        your dreamtime runs out &amp;ndash; or you will remain trapped forever!<br /><br />You may wander
+                        through the chambers of dreams, hoping that chance will reveal the doors, or you can linger in each type
+                        of room. In both cases, you will have to deal with the slithering Nightmares, which haunt the hallways
+                        of the labyrinth.<br /><br />Onirim is a solo/cooperative card game. You (and a partner, if you wish)
+                        must work (together) against the game to gather the eight Door cards before the deck runs out; you can
+                        obtain those Door cards either by playing cards of the same color three turns in a row, or by discarding
+                        (under specific circumstances) one of your powerful Key cards. In both cases you will have to decide the
+                        best use of each card in your hand and carefully play around the Nightmares. Those cards are hidden in
+                        the deck and will trigger painful dilemmas when drawn...<br /><br />Seven mini-expansions, all
+                        standalone and compatible with one another, are included with the second edition of Onirim, including
+                        these three that were in the first edition of the game:<br /><br /><br /> &amp;quot;The Towers&amp;quot;
+                        introduces a new type of card that allows more searching and deck manipulation, while also imposing an
+                        additional victory condition.<br /><br /><br /><br /> &amp;quot;Happy Dreams and Dark
+                        Premonitions&amp;quot; adds evil time bombs that will impede your progress at predictable moments of
+                        your quest as well as helpful but unreliable allies.<br /><br /><br /><br /> In &amp;quot;The Book of
+                        Steps Lost and Found&amp;quot;, you must find the eight Door cards in a randomly given order and may
+                        remove discarded cards from the game to cast powerful spells that will help you complete this difficult
+                        task.<br /><br /><br />In addition to these three variants from the first edition, there are four new
+                        modules in the Onirim 2nd edition box. Just like previously, each module consists of something that
+                        makes the game easier and something that makes the game harder:<br /><br /><br /> &amp;quot;The
+                        Glyphs&amp;quot; introduces a fourth symbol on location cards (apart from Key, Sun and Moon), which
+                        makes it easier to compose the row of unrepeated symbols. Player must then find one extra door of each
+                        color (so 12 doors in total) to win<br /><br /><br /><br /> &amp;quot;The Dreamcatchers&amp;quot; are
+                        four cards that &amp;quot;guard&amp;quot; the Limbo piles. The Limbo pile stays with Dreamcatcher until
+                        some effect allows the player to shuffle the pile back to the deck... if all Dreamcatchers are full and
+                        new cards should come to Limbo, a Dreamcatcher is discarded and his cards shuffled back. Also, four new
+                        &amp;quot;Lost Dreams&amp;quot; cards are supposed to be in Limbo at the end of the game, as an extra
+                        winning condition - so discarding all Dreamcatchers means loss.<br /><br /><br /><br /> &amp;quot;The
+                        Crossroads and Dead Ends&amp;quot; introduce location cards with a given symbol (3 Sun, 2 Moon, 1 Key),
+                        but serving as any color &amp;quot;joker&amp;quot;. It also contains 10 &amp;quot;Dead End&amp;quot;
+                        cards, that remain in players hand (un-discard-able on its own) and block her 5-cards hand limit...
+                        until a player discards the whole hand (=the only way to discard a Dead End).<br /><br /><br /><br />
+                        &amp;quot;The Door To The Oniverse&amp;quot; brings several one-time abilities cards as
+                        &amp;quot;inhabitants of the Oniverse&amp;quot;... and one extra colorless door to
+                        find.<br /><br /><br />Apart from all those, there are a few special rules to use the dark meeple in the
+                        game (which interferes with Nightmare cards resolving), making the game easier or harder, depending on
+                        the chosen variant.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/FxY9Hmh_DCrx7lWA_ZuCHR-s1UM=/0x0/pic3120646.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>The Oregon Trail Card Game</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>2-6</div>
+                    <div><strong>Time:</strong>30-45</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Description from the publisher:<br /><br />&amp;quot;Based on the classic computer
+                        game&amp;quot;<br /><br />According to the box:<br /><br />&amp;quot;You may:<br />1. Travel the
+                        trail<br />2. Work together to overcome calamities<br />3. Get at least one member of your party to
+                        Oregon<br />4. Stop and rest<br />5. Decide which of your friends will die of dysentery<br />6. Write
+                        your name on a tombstone<br />What is your choice?&amp;quot;<br /><br />All sorts of gruesome deaths
+                        await you and the rest of your wagon party in this official multi-player card game version of the
+                        classic computer game. To win you&amp;rsquo;ll need to keep one player alive all the way from
+                        Independence, MO to the Willamette Valley. But between rattlesnakes, starvation, dead oxen, broken
+                        bones, dysentery, and a host of other calamities the odds are long . . . almost as long as the Oregon
+                        Trail itself.<br /><br />Players work together to move along the trail, fording rivers and playing
+                        Supply Cards to overcome calamities. But be warned&amp;ndash;there will be times when it makes sense to
+                        let one of your wagon mates succumb to a calamity rather than expend precious supplies. And every time
+                        players go the way of all flesh, you&amp;rsquo;ll flip over the roster card and write their names on
+                        tombstones (don&amp;rsquo;t forget to include a quick epitaph). It&amp;rsquo;s a great way to relive
+                        your fond memories of one of the world&amp;rsquo;s most beloved computer games, and to kill off your
+                        family and friends at the same time.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/YZPY32nliJsyXGE7B7uM_v3TMB4=/0x0/pic2225998.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Pandemic: The Cure</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2014</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Pandemic: The Cure, a dice-based version of the popular Pandemic board game, sets up in less than a
+                        minute and plays in 30 minutes. As in the board game, four diseases threaten the world and it's up to
+                        your team to save humanity. You and your team must keep the world's hotspots in check before they break
+                        out of control, while researching cures to the four plagues.<br /><br />Players roll dice each turn to
+                        determine the actions available to them. They can fly and sail between the six major population centers
+                        of the world, treat disease in their current region, collect samples for further study, and exchange
+                        knowledge to help them in their goal of discovering cures. Each player takes on a different role that
+                        has its own unique set of dice and abilities &amp;mdash; and players must take advantage of their
+                        specializations if they are to have any hope of winning the game. The Dispatcher, for example, can spend
+                        dice to fly others around the board, while the Medic is particularly adept at treating disease. Players
+                        can roll their dice as often as they like, but the more times they re-roll for the perfect turn, the
+                        more likely the next epidemic will occur.<br /><br />At the end of each turn, new &amp;quot;infection
+                        dice&amp;quot; are rolled to determine the type and location of newly infected populations. If any
+                        region on the board is infected with more than three dice of a given color, an outbreak occurs,
+                        spreading disease into an adjacent region. If too many outbreaks take place, too many people get
+                        infected, or the rate of infection gets too high, all the players lose. If, however, the players can
+                        discover the cures to the four diseases, they all win and humanity is saved!<br /><br />Part of the
+                        Pandemic series.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/Z8MYZktgvGTtIikMv9HSpD_ERAI=/0x0/pic2270442.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Patchwork</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2014</div>
+                    <div><strong>Players:</strong>2</div>
+                    <div><strong>Time:</strong>15-30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In Patchwork, two players compete to build the most aesthetic (and high-scoring) patchwork quilt on a
+                        personal 9x9 game board. To start play, lay out all of the patches at random in a circle and place a
+                        marker directly clockwise of the 2-1 patch. Each player takes five buttons &amp;mdash; the
+                        currency/points in the game &amp;mdash; and someone is chosen as the start player.<br /><br />On a turn,
+                        a player either purchases one of the three patches standing clockwise of the spool or passes. To
+                        purchase a patch, you pay the cost in buttons shown on the patch, move the spool to that patch's
+                        location in the circle, add the patch to your game board, then advance your time token on the time track
+                        a number of spaces equal to the time shown on the patch. You're free to place the patch anywhere on your
+                        board that doesn't overlap other patches, but you probably want to fit things together as tightly as
+                        possible. If your time token is behind or on top of the other player's time token, then you take another
+                        turn; otherwise the opponent now goes. Instead of purchasing a patch, you can choose to pass; to do
+                        this, you move your time token to the space immediately in front of the opponent's time token, then take
+                        one button from the bank for each space you moved.<br /><br />In addition to a button cost and time
+                        cost, each patch also features 0-3 buttons, and when you move your time token past a button on the time
+                        track, you earn &amp;quot;button income&amp;quot;: sum the number of buttons depicted on your personal
+                        game board, then take this many buttons from the bank.<br /><br />What's more, the time track depicts
+                        five 1x1 patches on it, and during set-up you place five actual 1x1 patches on these spaces. Whoever
+                        first passes a patch on the time track claims this patch and immediately places it on his game
+                        board.<br /><br />Additionally, the first player to completely fill in a 7x7 square on his game board
+                        earns a bonus tile worth 7 extra points at the end of the game. (Of course, this doesn't happen in every
+                        game.)<br /><br />When a player takes an action that moves his time token to the central square of the
+                        time track, he takes one final button income from the bank. Once both players are in the center, the
+                        game ends and scoring takes place. Each player scores one point per button in his possession, then loses
+                        two points for each empty square on his game board. Scores can be negative. The player with the most
+                        points wins.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/c6DpCmsilfrS__bAZse3M8bfSUY=/0x0/pic4240471.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Patchwork Express</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2018</div>
+                    <div><strong>Players:</strong>2</div>
+                    <div><strong>Time:</strong>10</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Patchwork Express features the same basic gameplay as Patchwork, but with a smaller playing area and
+                        with larger and less complex pieces.<br /><br />In the game, each player tries to build the most
+                        aesthetic (and high-scoring) patchwork quilt on a personal 7x7 game board. To start play, lay out all of
+                        the light-colored patches at random in a circle and place a starting marker in a particular location.
+                        Each player takes some buttons &amp;mdash; the currency/points in the game &amp;mdash; and someone is
+                        chosen as the start player.<br /><br />On a turn, a player either purchases one of the three patches
+                        standing clockwise of the starting marker or passes. To purchase a patch, you pay the cost in buttons
+                        shown on the patch, move the starting marker to that patch's location in the circle, add the patch to
+                        your game board, then advance your time token on the time track a number of spaces equal to the time
+                        shown on the patch. You're free to place the patch anywhere on your board that doesn't overlap other
+                        patches, but you probably want to fit things together as tightly as possible. If your time token is
+                        behind or on top of the other player's time token, then you take another turn; otherwise the opponent
+                        now goes. Instead of purchasing a patch, you can choose to pass; to do this, you move your time token to
+                        the space immediately in front of the opponent's time token, then take one button from the bank for each
+                        space you moved.<br /><br />In addition to a button cost and time cost, each patch also features 0-3
+                        buttons, and when you move your time token past a button on the time track, you earn &amp;quot;button
+                        income&amp;quot;: sum the number of buttons depicted on your personal game board, then take this many
+                        buttons from the bank.<br /><br />What's more, the time track depicts six 1x1 patches on it, and during
+                        set-up you place six actual 1x1 patches on these spaces. Whoever first passes a patch on the time track
+                        claims this patch and immediately places it on their game board.<br /><br />At some point during the
+                        game, dark-colored patches are added to what's available for players to take, and these pieces are
+                        smaller than the light-colored ones, making it more likely that they'll fill in holes on a player's
+                        board.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/9pps4qJcocEIfvWT79FfmjoSR9Q=/0x0/pic2020706.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Planes</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2014</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        From the rails to the air &amp;mdash; well, hopefully. Planes puts you in the role of a group attempting
+                        to push your way through a crowded airport to reach your plane before takeoff. Other players' families
+                        or groups, as well as neutral travelers, will cause all sorts of congestion in the terminal and may keep
+                        you from boarding.<br /><br />With cards that affect play and allow bonus scoring, in addition to
+                        variable airport maps, Planes is the next phase in global travel from AEG's Destination Fun series!
+                        Continue your travels in the acclaimed Trains and Automobiles board games.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/RvdWBkmDks7AN8sodR4PyVcponA=/0x0/pic158548.jpg' height='300'
+                    width='300'>
+                <div>
+                    <strong>Name:</strong>Puerto Rico</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2002</div>
+                    <div><strong>Players:</strong>3-5</div>
+                    <div><strong>Time:</strong>90-150</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In Puerto Rico players assume the roles of colonial governors on the island of Puerto Rico. The aim of
+                        the game is to amass victory points by shipping goods to Europe or by constructing
+                        buildings.<br /><br />Each player uses a separate small board with spaces for city buildings,
+                        plantations, and resources. Shared between the players are three ships, a trading house, and a supply of
+                        resources and doubloons.<br /><br />The resource cycle of the game is that players grow crops which they
+                        exchange for points or doubloons. Doubloons can then be used to buy buildings, which allow players to
+                        produce more crops or give them other abilities. Buildings and plantations do not work unless they are
+                        manned by colonists.<br /><br />During each round, players take turns selecting a role card from those
+                        on the table (such as &amp;quot;Trader&amp;quot; or &amp;quot;Builder&amp;quot;). When a role is chosen,
+                        every player gets to take the action appropriate to that role. The player that selected the role also
+                        receives a small privilege for doing so - for example, choosing the &amp;quot;Builder&amp;quot; role
+                        allows all players to construct a building, but the player who chose the role may do so at a discount on
+                        that turn. Unused roles gain a doubloon bonus at the end of each turn, so the next player who chooses
+                        that role gets to keep any doubloon bonus associated with it. This encourages players to make use of all
+                        the roles throughout a typical course of a game.<br /><br />Puerto Rico uses a variable phase order
+                        mechanic, where a &amp;quot;governor&amp;quot; token is passed clockwise to the next player at the
+                        conclusion of a turn. The player with the token begins the round by choosing a role and taking the first
+                        action.<br /><br />Players earn victory points for owning buildings, for shipping goods, and for manned
+                        &amp;quot;large buildings.&amp;quot; Each player's accumulated shipping chips are kept face down and
+                        come in denominations of one or five. This prevents other players from being able to determine the exact
+                        score of another player. Goods and doubloons are placed in clear view of other players and the totals of
+                        each can always be requested by a player. As the game enters its later stages, the unknown quantity of
+                        shipping tokens and its denominations require players to consider their options before choosing a role
+                        that can end the game.<br /><br />In 2011 and mostly afterwards, Puerto Rico was published to include
+                        both Puerto Rico: Expansion I &amp;ndash; New Buildings and Puerto Rico: Expansion II &amp;ndash; The
+                        Nobles. These versions are included in the other game entry Puerto Rico (with two expansions), not this
+                        regular game entry for Puerto Rico.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/e6i_hN57VUYOdhMvbX-FpIWoWPA=/0x0/pic4783231.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Ravine</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2017</div>
+                    <div><strong>Players:</strong>3-6</div>
+                    <div><strong>Time:</strong>15-20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Ravine is a strategic and cooperative survival card game. You and your friends survived the plane crash,
+                        but will you survive the night? Work together to forage for food, craft a fire, and build shelters, but
+                        be wary: every step you take in the ravine could be one step closer to madness.<br /><br />During the
+                        Day, players risk their hearts to leave camp and forage for food and supplies. Before sunset, players
+                        work together, share what they found, and craft supplies. If you prepare well enough, you may survive
+                        the Night.<br /><br />Be prepared for more than just bumps in the night. Weather, animals, and other
+                        wild things will put you and your team to the test. BEWARE: Fall below two hearts and you will go
+                        mad.<br /><br />Lose all of your hearts to risk or the elements, and you lose the game. Survive all of
+                        the Night cards in your deck, and you win.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/ycpqmxmJDtf594Ck3CXaXRyYmaQ=/0x0/pic2736928.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Rolling America</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2015</div>
+                    <div><strong>Players:</strong>1-99</div>
+                    <div><strong>Time:</strong>15</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Rolling America, based on the 2014 release Rolling Japan, is a light &amp;quot;multiplayer
+                        solitaire&amp;quot; dice game. Each player has a map of the United States that's divided into fifty
+                        (abstractly represented) states, which are then bunched together into six differently colored
+                        areas.<br /><br />On a turn, a player draws two regular six-sided dice from a bag and rolls them; the
+                        bag starts with seven dice, six matching the colors of the areas on the map along with a wild clear die.
+                        All players now write down each number rolled on any state of the matching color, i.e., if the blue die
+                        shows 4 and the yellow a 2, write a 4 in one blue state and a 2 in one yellow state. If the clear die is
+                        rolled, you can place this number in a state of your choice; additionally, three times per game you can
+                        choose to use a non-clear die as any color. However, neighboring states can't have numbers with a
+                        difference larger than 1; if you can't place a number without breaking this rule, then you must place an
+                        X in a state of the appropriate color. (If all the states in an area are filled, you can ignore the die
+                        or use one of your three color changes to place the number elsewhere.)<br /><br />Rolling America has a
+                        few changes from Rolling Japan. The &amp;quot;guard&amp;quot; action allows you to ignore the
+                        neighboring number restriction three times during the game, and the &amp;quot;dupe&amp;quot; action
+                        allows you to use one of the active dice twice in the same region. As in real life, Alaska and Hawaii
+                        are not connected to the continental United States, so you can drop any numbers you want in those
+                        states!<br /><br />After six dice have been rolled, mark one round as being complete, then return the
+                        dice to the bag and start the next round. After eight rounds the game ends, and whoever has the fewest
+                        Xs on their map wins.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/arolwLL3MFCYy4UVXVy9Azlu5jI=/0x0/pic305120.jpg' height='300'
+                    width='300'>
+                <div>
+                    <strong>Name:</strong>Shut the Box</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>1750</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        The game 'box' has levers labelled from one to nine. (There are also sets made with
+                        1-12.)<br /><br />Initially all the levers are in the 'up' position.<br /><br />The first player rolls
+                        two dice. He or she then knocks down the levers as follows:<br /><br />One number which is the combined
+                        value of both dice.<br /><br />Or...<br /><br />Two numbers whose total adds up to the combined total of
+                        each dice.<br /><br />For example:<br /><br />If a one and a five are rolled, the player may choose to
+                        knock down the lever covering the number six, or the levers covering numbers one AND five, or ANY other
+                        combination of numbers adding up to six.<br /><br />The player continues to roll, knocking down levers
+                        each turn, until he or she cannot use the whole of the dice count because those numbers in the box have
+                        already been covered. (Note: If the 7,8 &amp;amp; 9 are covered, some versions let you choose to roll
+                        one or two dice. Some use that rule if the total of the remaining numbers is less than
+                        six.)<br /><br />The player's score is the total value of the numbers left uncovered (in some versions
+                        the score is instead read directly from the numbers left on the box -- if the 2, 4, &amp;amp; 6 are
+                        left, then your score is 246). All the levers are then raised again, and play passes to the next
+                        player.<br /><br />There are several methods of scoring. In the traditional pub gambling game, you add
+                        up all the levers left uncovered. The games pays out after one round (one turn per player who paid into
+                        the pool). If you manage to &amp;quot;shut the box&amp;quot; you win instantly and get double the stake
+                        from each player.<br /><br />In other scoring methods, you play multiple rounds, with players adding
+                        points to their previous score. As players reach forty-five (or other set number) they go 'bust' and
+                        must drop out of the game. The game then ends when only one player remains in the game. He or she is the
+                        winner.<br /><br />If any player knocks down ALL the levers in his or her turn, and thus 'shuts the
+                        box', they are automatically declared the winner!<br /><br />This was later the inspiration for the NBC
+                        Daytime TV game show High Rollers airing from 1974 until 1975 and again from 1979 until 1980 under the
+                        name as (The New) High Rollers and much later in Syndication from 1975 until 1976 and from 1987 until
+                        1988.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/3uBVJuvnZ5GUa-bEXP0PEcACPuw=/0x0/pic1779342.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Skull</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2011</div>
+                    <div><strong>Players:</strong>3-6</div>
+                    <div><strong>Time:</strong>15-45</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Edited description from Bruno Faidutti's write-up of the game in his Ideal Game
+                        Library:<br /><br />Skull &amp;amp; Roses is the quintessence of bluffing, a game in which everything is
+                        played in the players' heads. Each player plays a face-down card, then each player in turn adds one more
+                        card &amp;ndash; until someone feels safe enough to state that he can turn a number of cards face up and
+                        get only roses. Other players can then overbid him, saying they can turn even more cards face up. The
+                        highest bidder must then turn that number of cards face up, starting with his own. If he shows only
+                        roses, he wins; if he reveals a skull, he loses, placing one of his cards out of play. Two successful
+                        challenges wins the game. Skull &amp;amp; Roses is not a game of luck; it's a game of poker face and
+                        meeting eyes.<br /><br />Skull &amp;amp; Roses Red features the same gameplay as Skull &amp;amp; Roses,
+                        with the only change being alternate rules that allow each player to control two biker gangs. Both Skull
+                        &amp;amp; Roses Red and Skull are playable on their own, with each game containing six different biker
+                        gangs. Each Skull or Skull &amp;amp; Roses set can be combined with another to allow for games with more
+                        than six players.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/72Q9bUcQSa5LvuNCm7oa2ZqMUts=/0x0/pic4025733.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Songbirds</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>1-4</div>
+                    <div><strong>Time:</strong>20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        User summary<br />ことりファイト! (Birdie Fight) is card game about birds trying to achieve dominance in the
+                        forest. Each bird is a different colour in the game.<br /><br />Players are forest spirits, trying to
+                        secretly guide their chosen bird to success. The cards are numbered 1 to 7 in red, blue, green and
+                        white. The players lay a card from their hand to a 5x5 grid after nut tokens (points) are laid out for
+                        each row and column.<br /><br />When the grid is full of cards, the rows and columns are checked. The
+                        colour with the highest total in a line takes the nut token for that bird. Colours with tied totals are
+                        ignored, so a low value card can win the nut token for that bird.<br /><br />When the nuts are totalled
+                        up for the birds, the players reveal their final hand card. That card is the bird they favoured (so more
+                        than one player might be helping the same bird), and for each player, the number on the card is added to
+                        the nut total to identify who has the dominant bird.<br /><br />Since the players choose which bird they
+                        favour by leaving it as their final hand card, they can delay this choice until they see how the game is
+                        panning out.<br /><br />The game rules come in Japanese and English, the game itself being language
+                        free. The game includes rules for 2-4 players or a solitaire/co-op mode for 1-2
+                        players.<br /><br />Publisher's
+                        summary<br />小鳥たちの勢力争いをテーマにしたゲームです。<br />各プレイヤーに同数のカードが配られ、色と強さを持ったカードを順に１枚ずつ5&amp;times;5のエリアに配置していきます。空きがなくなればプレイ終了。縦と横の各ラインで見て、マジョリティを取った小鳥が、そのラインの木の実（点数）を獲得します。各プレイヤーは手札が最後に１枚残るようになっており、それが自分のお気に入りの小鳥となります。お気に入りの小鳥が獲得した点数があなたの点数となります。これを２ラウンド繰り返し、最も点数の高いプレイヤーが勝利します。<br />英語説明書付き<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/Hv567JuhL7eHPCO7qeGcrld1giQ=/0x0/pic2722498.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Spaceteam</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2015</div>
+                    <div><strong>Players:</strong>3-6</div>
+                    <div><strong>Time:</strong>5</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Spaceteam is a fast-paced, cooperative shouting card game in which you race to repair your
+                        malfunctioning spaceship.<br /><br />Your goal is to ensure that all ship systems are functioning
+                        properly before time runs out. Each player must deal with the various malfunctions in their sector by
+                        flipping cards from the malfunction deck in front of them, and fixing the ship's systems. You'll have an
+                        arsenal of disorganized space tools spread among all players' hands, but finding the right tools can be
+                        harder than you think, especially when your Spaceteam is franticly worrying about malfunctions in their
+                        own sector. If that wasn&amp;rsquo;t hard enough, you&amp;rsquo;ll also have to deal with complications
+                        such as wormholes and asteroid fields, which require the coordination of the entire Spaceteam. There are
+                        no turns; everyone plays and shouts at the same time. Victory is achieved if enough malfunctions are
+                        corrected to reveal the 6 hidden System-Go Cards before time is up.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/RmP2yBDA0LE-ZFWrEXAkgRuYjn0=/0x0/pic3615739.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Spirit Island</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2017</div>
+                    <div><strong>Players:</strong>1-4</div>
+                    <div><strong>Time:</strong>90-120</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In the most distant reaches of the world, magic still exists, embodied by spirits of the land, of the
+                        sky, and of every natural thing. As the great powers of Europe stretch their colonial empires further
+                        and further, they will inevitably lay claim to a place where spirits still hold power - and when they
+                        do, the land itself will fight back alongside the islanders who live there.<br /><br />Spirit Island is
+                        a complex and thematic cooperative game about defending your island home from colonizing Invaders.
+                        Players are different spirits of the land, each with its own unique elemental powers. Every turn,
+                        players simultaneously choose which of their power cards to play, paying energy to do so. Using
+                        combinations of power cards that match a spirit's elemental affinities can grant free bonus effects.
+                        Faster powers take effect immediately, before the Invaders spread and ravage, but other magics are
+                        slower, requiring forethought and planning to use effectively. In the Spirit phase, spirits gain energy,
+                        and choose how / whether to Grow: to reclaim used power cards, to seek for new power, or to spread
+                        presence into new areas of the island.<br /><br />The Invaders expand across the island map in a
+                        semi-predictable fashion. Each turn they explore into some lands (portions of the island); the next
+                        turn, they build in those lands, forming settlements and cities. The turn after that, they ravage there,
+                        bringing blight to the land and attacking any native islanders present.<br /><br />The islanders fight
+                        back against the Invaders when attacked, and lend the spirits some other aid, but may not always do so
+                        exactly as you'd hoped. Some Powers work through the islanders, helping them (eg) drive out the Invaders
+                        or clean the land of blight.<br /><br />The game escalates as it progresses: spirits spread their
+                        presence to new parts of the island and seek out new and more potent powers, while the Invaders step up
+                        their colonization efforts. Each turn represents 1-3 years of alternate-history.<br /><br />At game
+                        start, winning requires destroying every last settlement and city on the board - but as you frighten the
+                        Invaders more and more, victory becomes easier: they'll run away even if some number of settlements or
+                        cities remain. Defeat comes if any spirit is destroyed, if the island is overrun by blight, or if the
+                        Invader deck is depleted before achieving victory.<br /><br />The game includes different adversaries to
+                        fight against (eg: a Swedish Mining Colony, or a Remote British Colony). Each changes play in different
+                        ways, and offers a different path of difficulty boosts to keep the game challenging as you gain
+                        skill.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/oyBwAulX_QoEOhWstUvB4gs92Yw=/0x0/pic4222804.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Spirits of the Wild</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2018</div>
+                    <div><strong>Players:</strong>2</div>
+                    <div><strong>Time:</strong>15-30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Spirits of the Wild is a stone-taking game for two players. The object of the game is to earn the most
+                        points by collecting sets of colorful stones from a central bowl and giving them to the five animals on
+                        your score board.<br /><br />On your turn, you use action cards to draw or add stones to the bowl, use
+                        powerful spirit abilities, or send Coyote to distract your opponent. Always the trickster, Coyote
+                        prevents your opponent from giving stones to an animal of your choice, which might be just what you need
+                        to take the lead.<br /><br />The game ends when five spirit stones are released from the bag. Add up the
+                        points you gained for each animal, and the player with the most points wins!<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/fJBN3LBat3v7hhBuaaVXE-ZrD9s=/0x0/pic1203476.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Spot it!</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2009</div>
+                    <div><strong>Players:</strong>2-8</div>
+                    <div><strong>Time:</strong>15</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Spot it!, a.k.a. Dobble, is a simple pattern recognition game in which players try to find an image
+                        shown on two cards.<br /><br />Each card in original Spot it! features eight different symbols, with the
+                        symbols varying in size from one card to the next. Any two cards have exactly one symbol in common. For
+                        the basic Spot it! game, reveal one card, then another. Whoever spots the symbol in common on both cards
+                        claims the first card, then another card is revealed for players to search, and so on. Whoever has
+                        collected the most cards when the 55-card deck runs out wins!<br /><br />Rules for different games
+                        &amp;ndash; each an observation game with a speed element &amp;ndash; are included with Spot it!, with
+                        the first player to find a match either gaining or getting rid of a card. Multiple versions of Spot it!
+                        have been published, with images in each version ranging from Halloween to hockey to baseball to San
+                        Francisco.<br /><br />The game is sold as Spot it! in the USA and Dobble in Europe, with slight
+                        differences between the two editions.<br /><br />Note: some versions have fewer cards and fewer symbols
+                        per card. (E.g. 30 cards with 6 symbols each.): Spot it! 1,2,3<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/0HPPI23sFK-H6O8b47NEYkb2zD8=/0x0/pic3276261.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>State Smarts: The Card Game of National Intelligence</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2013</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>15-20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        From the publisher:<br /><br />State Smarts is a U.S. geography card game that is both educational and
+                        fun for children yet is also entertaining and challenging enough for adults. In addition to state
+                        specific facts, kids will also learn unique characteristics about each region of the country. The game
+                        also teaches state and landmark location as well as state abbreviations.<br /><br />State Smarts is more
+                        than just a game of learning, it&amp;rsquo;s also a competitive game of strategy that the whole family
+                        can enjoy. Experienced players that have familiarized themselves with the facts will quickly appreciate
+                        the element of probability that makes playing State Smarts&amp;trade; so much fun.<br /><br />State
+                        Smarts is a simple card game that is easy to learn and a game that can be played anywhere. There are 100
+                        cards in the deck with about 70 different original illustrations. A game of State Smarts should last
+                        about 15-20 minutes.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/Lf3vxVq1GZkbNIIi13sq7HuPKiI=/0x0/pic3063589.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Struggle for Catan</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2011</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In 2010, designer Klaus Teuber overhauled the two-player Catan card game with the release of The Rivals
+                        for Catan &amp;ndash; released in Germany as Die F&amp;uuml;rsten von Catan &amp;ndash; and in 2011
+                        Teuber, Kosmos and Mayfair Games present a new multi-player card game set in the Catan universe: The
+                        Struggle for Catan, aka, Die Siedler von Catan: Das schnelle Kartenspiel.<br /><br />As in the original
+                        The Settlers of Catan board game, players need to manage their resources in order to build settlements,
+                        roads, cities, city improvements and knights, all of which grant victory points (VPs) or special
+                        abilities. Control of roads and knights can change hands during the game, so don't assume that what's
+                        yours will stay yours. City improvements are expensive, but they bring you additional VPs and other
+                        bonuses, so strive to spiff up your cities! The first player to have ten VPs wins the
+                        game.<br /><br />The game is dice-less and resource gain and exchanging is based on each player's
+                        developments making this version less luck dependent than the original. A twist in the game is that
+                        certain developments are limited and can be stolen from other players once there are no new ones left.
+                        The first player to gain 10 victory points, wins the game.<br /><br />(Note that Kosmos lists this game
+                        with a 30-minute playing time, while Mayfair Games sets the playing time at 45-60
+                        minutes.)<br /><br />Mixing two copies of game, can be played with 5 and 6 players.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/IDxIxVzcUPT2F7HUuBnAIZvKrBA=/0x0/pic3031286.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Sushi Go Party!</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>2-8</div>
+                    <div><strong>Time:</strong>20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Sushi Go Party! expands Sushi Go! with a party platter of mega maki, super sashimi, and endless edamame.
+                        You still earn points by picking winning sushi combos, but now you can customize each game by choosing
+                        &amp;agrave; la carte from a menu of more than twenty delectable dishes. What's more, up to eight
+                        players can join in on the sushi-feast. Let the good times roll!<br /><br />&amp;mdash;description from
+                        the publisher<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/IlYW00i351ucPwf_aHiE0v-HNdM=/0x0/pic1900075.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Sushi Go!</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2013</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>15</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In the super-fast sushi card game Sushi Go!, you are eating at a sushi restaurant and trying to grab the
+                        best combination of sushi dishes as they whiz by. Score points for collecting the most sushi rolls or
+                        making a full set of sashimi. Dip your favorite nigiri in wasabi to triple its value! And once you've
+                        eaten it all, finish your meal with all the pudding you've got! But be careful which sushi you allow
+                        your friends to take; it might be just what they need to beat you!<br /><br />Sushi Go! takes the
+                        card-drafting mechanism of Fairy Tale and 7 Wonders and distills it into a twenty-minute game that
+                        anyone can play. The dynamics of &amp;quot;draft and pass&amp;quot; are brought to the fore, while
+                        keeping the rules to a minimum. As you see the first few hands of cards, you must quickly assess the
+                        make-up of the round and decide which type of sushi you'll go for. Then, each turn you'll need to weigh
+                        which cards to keep and which to pass on. The different scoring combinations allow for some clever plays
+                        and nasty blocks. Round to round, you must also keep your eye on the goal of having the most pudding
+                        cards at the end of the game!<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/YMeEyE2pelQwDsyNy8MybX-UqWs=/0x0/pic4574571.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Sushi Roll</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2019</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Rice and dice! Roll with your favorite Sushi Go! characters in Sushi Roll, a dice-based version of the
+                        best-selling card game!<br /><br />Load up the conveyor belts with savory sushi dice &amp;mdash; then
+                        pick one and pass the rest! Earn points for winning combos like two tempura or a set of sashimi. Grab a
+                        menu to re-roll your dice or use chopsticks to swap with an opponent. And be sure to save room for
+                        pudding at the end!<br /><br />&amp;mdash;description from the publisher<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/SPs7DpPr-bzxD0-dNsS-_3YFdMo=/0x0/pic212946.jpg' height='300'
+                    width='300'>
+                <div>
+                    <strong>Name:</strong>Taboo</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>1989</div>
+                    <div><strong>Players:</strong>4-10</div>
+                    <div><strong>Time:</strong>20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Taboo is a party word game. Players take turns describing a word or phrase on a drawn card to their
+                        partner without using five common additional words or phrases also on the card. The opposing partners
+                        watch a timer and use a buzzer to stop the game, buzz the player describing if one of the five off
+                        limits words or phrases is used, or the describing player makes any gestures. The describing team gets a
+                        point for each card they guess successfully and the opposing team gets a point for each card they pass
+                        on, make gestures on, or lose for saying one of the off limits words or phrases. An excellent party
+                        game!<br /><br />Expanded by:<br /><br /><br /> Taboo Refill<br /><br /><br />Re-implemented
+                        by:<br /><br /><br /> Taboo Junior<br /> Celebrity Taboo<br /><br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/BF0nyODRD6bncEc7X1D5VNQRU8M=/0x0/pic4010437.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>The Tea Dragon Society Card Game</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2018</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>30-60</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Discover the ancient art form of Tea Dragon care-taking within The Tea Dragon Society Card Game, based
+                        on the graphic novel The Tea Dragon Society. Create a bond between yourself and your Tea Dragon that
+                        grows as you progress through the seasons, creating memories to share forever.<br /><br />Each player's
+                        deck represents their own Tea Dragon. From turn to turn, players choose to draw a card &amp;mdash;
+                        triggering effects and strengthening their position &amp;mdash; or buy a card, improving their deck or
+                        scoring points. The game takes place over four seasons, starting in spring and ending in winter. At the
+                        end of winter, the player who has the most points wins.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/o8z_levBVArPUKI7ZrIysZEs1A0=/0x0/pic3536616.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Terraforming Mars</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2016</div>
+                    <div><strong>Players:</strong>1-5</div>
+                    <div><strong>Time:</strong>120</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In the 2400s, mankind begins to terraform the planet Mars. Giant corporations, sponsored by the World
+                        Government on Earth, initiate huge projects to raise the temperature, the oxygen level, and the ocean
+                        coverage until the environment is habitable. In Terraforming Mars, you play one of those corporations
+                        and work together in the terraforming process, but compete for getting victory points that are awarded
+                        not only for your contribution to the terraforming, but also for advancing human infrastructure
+                        throughout the solar system, and doing other commendable things.<br /><br />The players acquire unique
+                        project cards (from over two hundred different ones) by buying them to their hand. The projects (cards)
+                        can represent anything from introducing plant life or animals, hurling asteroids at the surface,
+                        building cities, to mining the moons of Jupiter and establishing greenhouse gas industries to heat up
+                        the atmosphere. The cards can give you immediate bonuses, as well as increasing your production of
+                        different resources. Many cards also have requirements and they become playable when the temperature,
+                        oxygen, or ocean coverage increases enough. Buying cards is costly, so there is a balance between buying
+                        cards (3 megacredits per card) and actually playing them (which can cost anything between 0 to 41
+                        megacredits, depending on the project). Standard Projects are always available to complement your
+                        cards.<br /><br />Your basic income, as well as your basic score, is based on your Terraform Rating
+                        (starting at 20), which increases every time you raise one of the three global parameters. However, your
+                        income is complemented with your production, and you also get VPs from many other
+                        sources.<br /><br />Each player keeps track of their production and resources on their player boards,
+                        and the game uses six types of resources: MegaCredits, Steel, Titanium, Plants, Energy, and Heat. On the
+                        game board, you compete for the best places for your city tiles, ocean tiles, and greenery tiles. You
+                        also compete for different Milestones and Awards worth many VPs. Each round is called a generation
+                        (guess why) and consists of the following phases:<br /><br />1) Player order shifts clockwise.<br />2)
+                        Research phase: All players buy cards from four privately drawn.<br />3) Action phase: Players take
+                        turns doing 1-2 actions from these options: Playing a card, claiming a Milestone, funding an Award,
+                        using a Standard project, converting plant into greenery tiles (and raising oxygen), converting heat
+                        into a temperature raise, and using the action of a card in play. The turn continues around the table
+                        (sometimes several laps) until all players have passed.<br />4) Production phase: Players get resources
+                        according to their terraform rating and production parameters.<br /><br />When the three global
+                        parameters (temperature, oxygen, ocean) have all reached their goal, the terraforming is complete, and
+                        the game ends after that generation. Count your Terraform Rating and other VPs to determine the winning
+                        corporation!<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/cOzRQlTqfAzl1hovNY00AJXIb2o=/0x0/pic4767254.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Three-Dragon Ante: Legendary Edition</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2019</div>
+                    <div><strong>Players:</strong>2-6</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Three-Dragon Ante: Legendary Edition is a re-imagining of the original classic Dungeons &amp;amp;
+                        Dragons Three Dragon Ante, a casual standalone card game of chance for two to six players. Each hand,
+                        players ante gold to the stakes and compete to play the strongest flight of three cards, dragons, or
+                        mortals. The strongest flight wins that gold from the stakes, but playing weaker cards triggers your
+                        cards' powers and sets you up to win the next hand. This Legendary Edition includes new Legendary
+                        Dragons, Mortals, Gold and Platinum Pieces, and Ability Disks for combining Three-Dragon Ante with the
+                        Dungeons &amp;amp; Dragons tabletop game!<br /><br />The craftiest (and luckiest) player wins by taking
+                        the most gold!<br /><br />&amp;mdash;description from the publisher<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/k00oozYV3nnyaK6NP76EfmtnE04=/0x0/pic3747083.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Tortuga 1667</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2017</div>
+                    <div><strong>Players:</strong>2-9</div>
+                    <div><strong>Time:</strong>20-40</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        The year is 1667 and you are a pirate sailing the waters of the Caribbean. A Spanish Galleon floats
+                        nearby, and you&amp;rsquo;ve talked your crewmates into working together to steal all of its treasure.
+                        What you haven&amp;rsquo;t told your fellow pirates is that you have no intentions on sharing the
+                        treasure once you have it. Your crewmates have told you that they share your loyalty and that
+                        they&amp;rsquo;ll help you maroon the greedy pirates on your ship to the rocky island of Tortuga. But
+                        you&amp;rsquo;ve seen your friends&amp;rsquo; loaded pistols and heard their whisperings of a mutiny.
+                        You know that nobody can be trusted.<br /><br />Tortuga is all about the interactions you have with the
+                        other players. In some cases, such as when you and your shipmates are attacking the Spanish Galleon, you
+                        need to rely on your enemies in order to succeed. In the very next turn, however, your shipmates might
+                        stab you in the back with a mutiny in order to keep all the treasure for themselves.<br /><br />Since
+                        nobody holds a &amp;quot;hand&amp;quot; of cards, this game is also about knowledge and communication
+                        regarding the community Event cards. Unless you are in desperation mode, it is not wise to reveal Event
+                        cards at random. Almost half of the Event cards can hurt your team drastically. It's often in your best
+                        interest to use an action to view the cards first, or to rely on the knowledge of a trusted ally.
+                        Knowing where harmful Event cards are located allows you to force an enemy to reveal those cards and
+                        suffer the consequences. The most successful players are the ones who are able to discern who is on
+                        their team and then share vital information with them at opportune moments.<br /><br />Vote cards also
+                        play a key role in the game. Each Vote card has three sections - one each for Attacks, Mutinies, and
+                        Brawls. Players must put themselves in the best position to use their Vote cards, since their hand of
+                        Vote cards may not always be ideal based on their pawn location. For example, sometimes it may be worth
+                        putting in Water, causing an attack to fail, in order to save a Crossbones card for when you want to
+                        Mutiny against your captain.<br /><br />For 2-9 Players. 20-40 minutes. Ages 12+.<br /><br />Volume 2 in
+                        the Dark Cities Series by Facade Games.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/hUpkMqhWJ5rHil4X4sAO6o6niRg=/0x0/pic3989423.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Trash Pandas</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2017</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>15-20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        In Trash Pandas, players are raucous raccoons, tipping over trash cans for food (and shiny objects).
+                        Players push their luck to acquire more cards, but must stash them in order for them to count as points
+                        at the end of the game. When the deck runs out, the game ends and players compare their stashes to see
+                        who has the majority for each card type and score points accordingly. The player with the most points
+                        wins!<br /><br />In more detail, on a turn the active player rolls a die in the hope of gaining the
+                        benefit of the roll result. With each roll, the player decides to keep rolling or stop and activate the
+                        dice results. However, with each additional roll, the odds of busting (getting a duplicate result)
+                        increase further and the player risks losing the progress they've made that round. When activating the
+                        dice results, the player will draw cards, steal cards from other players, and stash cards. Cards in hand
+                        may be used for their listed ability, but they count as points only when
+                        stashed.<br /><br />&amp;mdash;description from the publisher<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/3bI3uhQkI3UlGMEFFDUYaZGtMBI=/0x0/pic4214949.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Trekking the National Parks: Second Edition</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2018</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>30-60</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Imagine yourself staring down a giant grizzly in Katmai National Park. Take a canoe ride alongside
+                        alligators in the swampy waters of the Everglades. Trek the trails that define our nation's most
+                        valuable public resource &amp;mdash; the National Parks!<br /><br />Trekking the National Parks is an
+                        award-winning family board game that celebrates the U.S. national parks in a fun and competitive way.
+                        Players compete for points by claiming park cards and collecting trail stones as they travel across the
+                        map experiencing the wonders at each of these magnificent landscapes.<br /><br />The second edition of
+                        Trekking the National Parks features a more accessible rulebook, simplified movement rules to create a
+                        more streamlined play experience, new Major Park locations and wooden campsites that award special
+                        abilities to players, and a change to stone majority bonus points, with both the first- and second-place
+                        players now receiving points.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/RnYj0vhdTav6LaS53HR3yKPo4ag=/0x0/pic875761.jpg' height='300'
+                    width='300'>
+                <div>
+                    <strong>Name:</strong>Tsuro</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2004</div>
+                    <div><strong>Players:</strong>2-8</div>
+                    <div><strong>Time:</strong>15</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        From the publisher:<br /><br />A beautiful and beautifully simple game of laying a tile before your own
+                        token to continue its path on each turn. The goal is to keep your token on the board longer than anyone
+                        else's, but as the board fills up this becomes harder because there are fewer empty spaces left... and
+                        another player's tile may also extend your own path in a direction you'd rather not go. Easy to
+                        introduce to new players, Tsuro lasts a mere 15 minutes and actually does work for any number from 2 to
+                        8.<br /><br />Theme:<br /><br />Tsuro has an Asian spiritual theme - the lines representing the
+                        &amp;quot;many roads that lead to divine wisdom&amp;quot;, and the game as a whole representing
+                        &amp;quot;the classic quest for enlightenment&amp;quot;.<br /><br />This theme is very light and the
+                        game essentially plays as an abstract.<br /><br />Gameplay:<br /><br />The game consists of tiles with
+                        twisting lines on them, a 6x6 grid on which to lay these tiles and a token for each player. Each player
+                        has a hand of tiles. On your turn you do two things: place a tile from your hand onto the board next to
+                        your token and move your token as far as it can go along the line it is currently on, until it is
+                        stopped by an empty space with no tile in (yet), the edge of the board or colliding with another
+                        player's token. If your token reaches the edge of the board or collides with another player's token, you
+                        are out of the game. The aim of the game is to be the last player left with a token on the board.
+                        Strategy therefore consists of trying to drive your opponents either into each other or off the board
+                        whilst extending your own route in directions that will make it difficult for your opponents to do the
+                        same.<br /><br />Other notes:<br /><br />Tsuro was originally patented by McMurchie in 1979 under the
+                        name Squiggle Game, but was apparently not published at that time. Somewhat similar to Metro and
+                        Spaghetti Junction.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/z3OFp3362X0ZPf5CIc5vfxzwDsg=/0x0/pic981505.jpg' height='300'
+                    width='300'>
+                <div>
+                    <strong>Name:</strong>UNO</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>1971</div>
+                    <div><strong>Players:</strong>2-10</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Players race to empty their hands and catch opposing players with cards left in theirs, which score
+                        points. In turns, players attempt to play a card by matching its color, number, or word to the topmost
+                        card on the discard pile. If unable to play, players draw a card from the draw pile, and if still unable
+                        to play, they pass their turn. Wild and special cards spice things up a bit.<br /><br />UNO is a
+                        commercial version of Crazy Eights, a public domain card game played with a standard deck of playing
+                        cards.<br /><br />This entry includes all themed versions of UNO that do not include new
+                        cards.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/YmHrr5UXe1uiVybnBWWcwY6AG_E=/0x0/pic4055313.png'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Village Pillage</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2019</div>
+                    <div><strong>Players:</strong>2-5</div>
+                    <div><strong>Time:</strong>20</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Protect your borders, attack your neighbors, and be the first to collect three turnip
+                        relics!<br /><br />Village Pillage is a 2-5 player game for players 10 and up, featuring simultaneous
+                        play and action on all fronts. Each turn, players simultaneously choose two cards from their hand and
+                        play one against each neighbor. All cards are revealed at once, then resolved in order: Farmers, Walls,
+                        Raiders, Merchants. Farmers produce turnips, Walls block Raiders, Raiders steal turnips, and Merchants
+                        either add new cards to your hand or help you purchase a relic. All cards return to hand, and the next
+                        round begins! The game ends as soon as any one player has three royal relics.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row board-game-row'>
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/ySCDntUcGVCHV8O7sHGkUbvNkvs=/0x0/pic2436689.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Welcome to the Dungeon</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2013</div>
+                    <div><strong>Players:</strong>2-4</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Welcome to the Dungeon &amp;mdash; first released as Dungeon of Mandom &amp;mdash; is a push-your-luck
+                        dungeon delve in which 2-4 players take turns essentially daring each other to go into a dungeon with
+                        less equipment than they start off with while filling the dungeon with monsters. Players can win the
+                        game by winning 2 rounds or get eliminated from the game by losing 2 rounds. Each player has a 2-sided
+                        players card that has a white side and a red side. The first win taps the player card and the 1st loss
+                        flips the card over to the red side. A 2nd loss will have the player turn the card back into the
+                        box.<br /><br />The game is played in rounds. The player sets up the base character and all the
+                        equipment equipped. This represents every player as a fully equipped dungeon delver.<br /><br />Each
+                        round, the start player (the person who challenged the dungeon last or the last player to be in a
+                        dungeon) can choose to draw a card from the monster deck or pass their turn.<br /><br />If they choose
+                        to draw, they can do one of two things: (1) keep it and de-equip an equipment or (2) place it face down
+                        in the dungeon. Placing it face down in the dungeon creates the dungeon deck and fills the dungeon with
+                        monsters that the challenger will have to face later. If they choose to pass their turn, they cannot
+                        participate in the rest of the round. Once only one person is left after all the other players have
+                        passed their turn, that player then becomes the challenger and must go into the dungeon with only the
+                        equipment he has equipped.<br /><br />The player then flips cards off the dungeon deck and fights the
+                        monsters within. Some equipment allow you to null the enemy damage or be able to withstand it by
+                        increasing your HP. If the player survives the dungeon with at least 1 HP, they win that round. If not,
+                        they lose. The players then reshuffles all the cards to make a new monster deck and re-equips all the
+                        equipment to start a new round.<br /><br />The game ends when someone has won twice or one player is the
+                        last man standing.<br /><br />Welcome to the Dungeon includes four different sets of character cards
+                        whereas Dungeon of Mandom has only a single character.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/V_R5oe5Huj5guJaBhgbQkZR1PLE=/0x0/pic4458123.jpg'
+                    height='300' width='300'>
+                <div>
+                    <strong>Name:</strong>Wingspan</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>2019</div>
+                    <div><strong>Players:</strong>1-5</div>
+                    <div><strong>Time:</strong>40-70</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Wingspan is&amp;nbsp;a competitive, medium-weight, card-driven, engine-building board game from
+                        Stonemaier Games.<br /><br />You are bird enthusiasts&amp;mdash;researchers, bird watchers,
+                        ornithologists, and collectors&amp;mdash;seeking to discover and attract the best birds to your network
+                        of wildlife preserves. Each bird extends a chain of powerful combinations in one of your habitats
+                        (actions). These habitats focus on several key aspects of growth:<br /><br /><br /> Gain food tokens via
+                        custom dice in a birdfeeder dice tower<br /> Lay eggs using egg miniatures in a variety of colors<br />
+                        Draw from hundreds of unique bird cards and play them<br /><br /><br />The winner is the player with the
+                        most points after 4 rounds.<br /><br />If you enjoy Terraforming Mars and Gizmos, we think this game
+                        will take flight at your table.<br /><br />&amp;mdash;description from the publisher<br /><br />From the
+                        7th printing on, the base game box includes Wingspan: Swift-Start Promo Pack.<br /><br />
+                    </div>
+                </div>
+            </div>
+        
+            <div class='col-md-4 board-game-container'>
+                <img src='https://cf.geekdo-images.com/original/img/S9AmoNh3ZPyVXLxoqhOA7MBCN7M=/0x0/pic378237.jpg' height='300'
+                    width='300'>
+                <div>
+                    <strong>Name:</strong>Yahtzee</div>
+                <div class='details-container hide'>
+                    <div><strong>Published:</strong>1956</div>
+                    <div><strong>Players:</strong>2-10</div>
+                    <div><strong>Time:</strong>30</div>
+                    <div>
+                        <strong>Description:</strong> <br />
+                        Yahtzee is a classic dice game played with 5 dice. Each player's turn consists of rolling the dice up to
+                        3 times in hope of making 1 of 13 categories. Examples of categories are 3 of a kind, 4 of a kind,
+                        straight, full house, etc. Each player tries to fill in a score for each category, but this is not
+                        always possible. When all players have entered a score or a zero for all 13 categories, the game ends
+                        and total scores are compared.<br /><br />The traditional (public domain) game Yacht predates the
+                        trademarked game, and has slightly different scoring.<br /><br />There are four basic scoring difference
+                        between the tradition game Yacht and Yahtzee. They are: 1) Yacht has no Three of a Kind category, 2)
+                        there are no bonuses in Yacht, 3) there are no Joker rules in Yacht, and 4) the Full House category is
+                        scored as the sum of the dice. The other scoring rules are identical between the two
+                        games.<br /><br />Travel versions of the game use a device that keeps the dice captured within
+                        compartments of a plastic box and allows players to &amp;quot;lock&amp;quot; a particular die between
+                        rolls.<br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </html>
+
+<script>
+    $(document).ready(function(){
+        //alert('jquery test');
+
+        $('img').click(function(){
+            var $details = $(this).closest('.board-game-container').find('.details-container');
+            
+            if ($details.hasClass('hide')){
+                $details.removeClass('hide');
+            } else{
+                $details.addClass('hide');
+            }
+        });
+    })
+</script>
