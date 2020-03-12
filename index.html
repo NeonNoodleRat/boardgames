@@ -8,8 +8,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
     <style>
-        img:hover
-        {
+        img:hover{
             cursor: pointer;
         }
 
@@ -23,6 +22,10 @@
 
         strong {
             padding-right: 5px;
+        }
+
+        .filter-box-holder{
+            display: none;
         }
     </style>
 
@@ -69,9 +72,14 @@
       </nav>
     
     <div class="container">
-        hello welcome to THE PAGE BRO
+        <div>
+            Hello these are my board/card/tabletop games.
+        </div> 
+        <div>
+            Click an image to see more information.
+        </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 filter-box-holder">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Filter by name">
                   </div>
