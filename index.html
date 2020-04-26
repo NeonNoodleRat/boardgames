@@ -8,11 +8,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
     <style>
-        img:hover{
+        img:hover {
             cursor: pointer;
         }
 
-        .board-game-row{
+        .board-game-row {
             padding-top: 20px;
         }
 
@@ -24,11 +24,11 @@
             padding-right: 5px;
         }
 
-        .filter-box-holder{
+        .filter-box-holder {
             /* display: none; */
         }
 
-        .board-game-row{
+        .board-game-row {
             display: none;
         }
 
@@ -45,8 +45,21 @@
             justify-content: space-around;
         }
 
-        .name-container{
+        .name-container {
             max-width: 300px;
+        }
+
+        .username-search-container {
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .filter-box-holder {
+            display: none;
+        }
+
+        .board-game-container {
+            padding-top: 20px;
         }
 
     </style>
@@ -234,6 +247,9 @@
 
                         $('.flex-container').append($outerContainer);
                     });
+
+                    // show the board game filter textbox
+                    $('.filter-box-holder').show();
                 }
             });
         });
