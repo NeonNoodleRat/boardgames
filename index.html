@@ -200,58 +200,70 @@
         });
 
         $('.btn-username-search').click(function(){
-            var username = $('#username-search').val();
+            search();
+        });
 
-            $.ajax({
-                method: 'GET',
-                url: 'https://www.boardgamegeek.com/xmlapi2/collection?username=' + username,
-                success: function (xml) {
-                    var $xmlDoc = $(xml);
+        $('#username-search').keyup(function(e){
 
-                    $('.flex-container').empty();
-
-                    $xmlDoc.find('item').each(function(i, boardgameItem){
-                      var $item = $(boardgameItem);
-
-                      var name = $item.find('name').text()
-                      var yearPublished = $item.find('yearpublished').text();
-
-                      var image = $item.find('image').text();
-                      var gameId = $item.attr('objectid');
-                        var $outerContainer = $('<div class="board-game-container"></div>');
-                        var $img = $('<img src="' + image + '" height="300" width="300">');
-
-                        $outerContainer.append($img);
-
-                        var $nameContainer = $('<div class="name-container"><strong>Name:</strong><span class="name">' + name + '</span>' +'</div>');
-
-                        $outerContainer.append($nameContainer);
-
-                        var $detailsContainer = 
-                        $(
-                            '<div class="details-container hide">' +
-                                '<div><strong>Year Published:</strong><span class="year-published"></span></div>' +
-                                '<div><strong>Publisher:</strong><span class="publisher"></span></div>' +
-                                '<div><strong>Players:</strong><span class="players"></span></div>' +
-                                '<div><strong>Time:</strong><span class="time"></span></div>' +
-                                '<div>' +
-                                    '<strong>Description:</strong> <br/>' +
-                                    '<span class="description"></span>' +
-                                '</div>' +
-                            '</div>'
-                        );
-
-                        $outerContainer.append($detailsContainer);
-
-                        $outerContainer.data('gameId', gameId);
-
-                        $('.flex-container').append($outerContainer);
-                    });
-
-                    // show the board game filter textbox
-                    $('.filter-box-holder').show();
-                }
-            });
+            if (e.keyCode === 13){
+                search();
+            }
         });
     })
+
+    function search(){
+        var username = $('#username-search').val();
+
+        $.ajax({
+            method: 'GET',
+            url: 'https://www.boardgamegeek.com/xmlapi2/collection?username=' + username,
+            success: function (xml) {
+                var $xmlDoc = $(xml);
+
+                $('.flex-container').empty();
+
+                $xmlDoc.find('item').each(function(i, boardgameItem){
+                var $item = $(boardgameItem);
+
+                var name = $item.find('name').text()
+                var yearPublished = $item.find('yearpublished').text();
+
+                var image = $item.find('image').text();
+                var gameId = $item.attr('objectid');
+                    var $outerContainer = $('<div class="board-game-container"></div>');
+                    var $img = $('<img src="' + image + '" height="300" width="300">');
+
+                    $outerContainer.append($img);
+
+                    var $nameContainer = $('<div class="name-container"><strong>Name:</strong><span class="name">' + name + '</span>' +'</div>');
+
+                    $outerContainer.append($nameContainer);
+
+                    var $detailsContainer = 
+                    $(
+                        '<div class="details-container hide">' +
+                            '<div><strong>Year Published:</strong><span class="year-published"></span></div>' +
+                            '<div><strong>Publisher:</strong><span class="publisher"></span></div>' +
+                            '<div><strong>Players:</strong><span class="players"></span></div>' +
+                            '<div><strong>Time:</strong><span class="time"></span></div>' +
+                            '<div>' +
+                                '<strong>Description:</strong> <br/>' +
+                                '<span class="description"></span>' +
+                            '</div>' +
+                        '</div>'
+                    );
+
+                    $outerContainer.append($detailsContainer);
+
+                    $outerContainer.data('gameId', gameId);
+
+                    $('.flex-container').append($outerContainer);
+                });
+
+                // show the board game filter textbox
+                $('.filter-box-holder').show();
+            }
+        });
+    }
+    
 </script>
