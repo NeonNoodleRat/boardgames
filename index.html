@@ -166,41 +166,45 @@
             if (!$details.hasClass('hide')){
                 $details.addClass('hide');
             } else{
-                var boardgameId = $(this).parent().data('gameId');
+                if ($details.find('.description').text() === ''){
+                    var boardgameId = $(this).parent().data('gameId');
 
-                $.ajax({
-                    method: 'GET',
-                    url: 'https://www.boardgamegeek.com/xmlapi2/thing?id=' + boardgameId,
-                    success: function(xml){
-                        var $xmlDoc = $(xml);
-                        var yearPublished = $xmlDoc.find('yearpublished').attr('value'),
-                            //publisher = $xmlDoc.find('boardgamepublisher').text();
-                            minPlayers = $xmlDoc.find('minplayers').attr('value'),
-                            maxPlayers = $xmlDoc.find('maxplayers').attr('value'),
-                            minPlayTime = $xmlDoc.find('minplaytime').attr('value'),
-                            maxPlayTime = $xmlDoc.find('maxplaytime').attr('value'),
-                            description = $xmlDoc.find('description').text();
+                    $.ajax({
+                        method: 'GET',
+                        url: 'https://www.boardgamegeek.com/xmlapi2/thing?id=' + boardgameId,
+                        success: function(xml){
+                            var $xmlDoc = $(xml);
+                            var yearPublished = $xmlDoc.find('yearpublished').attr('value'),
+                                //publisher = $xmlDoc.find('boardgamepublisher').text();
+                                minPlayers = $xmlDoc.find('minplayers').attr('value'),
+                                maxPlayers = $xmlDoc.find('maxplayers').attr('value'),
+                                minPlayTime = $xmlDoc.find('minplaytime').attr('value'),
+                                maxPlayTime = $xmlDoc.find('maxplaytime').attr('value'),
+                                description = $xmlDoc.find('description').text();
 
-                        description = parseText(description);
-                        
-                        $details.find('.year-published').text(yearPublished);
-                        $details.find('.description').text(description);
+                            description = parseText(description);
+                            
+                            $details.find('.year-published').text(yearPublished);
+                            $details.find('.description').text(description);
 
-                        if (minPlayers === maxPlayers){
-                            $details.find('.players').text(minPlayers);
-                        } else{
-                            $details.find('.players').text(minPlayers + '-' + maxPlayers);
+                            if (minPlayers === maxPlayers){
+                                $details.find('.players').text(minPlayers);
+                            } else{
+                                $details.find('.players').text(minPlayers + '-' + maxPlayers);
+                            }
+                            
+                            if (minPlayTime === maxPlayTime){
+                                $details.find('.time').text(minPlayTime);
+                            } else {
+                                $details.find('.time').text(minPlayTime + '-' + maxPlayTime);
+                            }
+
+                            $details.removeClass('hide');
                         }
-                        
-                        if (minPlayTime === maxPlayTime){
-                            $details.find('.time').text(minPlayTime);
-                        } else {
-                            $details.find('.time').text(minPlayTime + '-' + maxPlayTime);
-                        }
-
-                        $details.removeClass('hide');
-                    }
-                });
+                    });
+                } else{
+                    $details.removeClass('hide');
+                }
             }
         });
 
