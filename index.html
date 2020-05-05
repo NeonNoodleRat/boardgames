@@ -62,6 +62,10 @@
             padding-top: 20px;
         }
 
+        .description-container {
+            max-width: 300px;
+        }
+
     </style>
 
     <nav class="navbar navbar-default">
@@ -174,12 +178,13 @@
                             minPlayers = $xmlDoc.find('minplayers').attr('value'),
                             maxPlayers = $xmlDoc.find('maxplayers').attr('value'),
                             minPlayTime = $xmlDoc.find('minplaytime').attr('value'),
-                            maxPlayTime = $xmlDoc.find('maxplaytime').attr('value');
+                            maxPlayTime = $xmlDoc.find('maxplaytime').attr('value'),
+                            description = $xmlDoc.find('description').text();
 
-                        // left off here add the details here
-                        // need to dupe that regex script you wrote to parse the gunk out of the description
+                        description = parseText(description);
                         
                         $details.find('.year-published').text(yearPublished);
+                        $details.find('.description').text(description);
 
                         if (minPlayers === maxPlayers){
                             $details.find('.players').text(minPlayers);
@@ -210,6 +215,32 @@
             }
         });
     })
+
+    function parseText(description)
+    {
+        var regex = /&shy;/gi;
+        description = description.replace(regex, '');
+
+        regex = /&mdash;/gi;
+        description = description.replace(regex, '—');
+
+        regex = /&#10;/gi;
+        description = description.replace(regex, '');
+
+        regex = /&ndash;/gi;
+        description = description.replace(regex, '-');
+
+        regex = /&rsquo;/gi;
+        description = description.replace(regex, '\'');
+
+        regex = /&quot;/gi;
+        description = description.replace(regex, '"');
+
+        regex = /&times;/gi;
+        description = description.replace(regex, '*');
+
+        return description;
+    }
 
     function search(){
         var username = $('#username-search').val();
@@ -242,11 +273,11 @@
                     var $detailsContainer = 
                     $(
                         '<div class="details-container hide">' +
-                            '<div><strong>Year Published:</strong><span class="year-published"></span></div>' +
-                            '<div><strong>Publisher:</strong><span class="publisher"></span></div>' +
+                            '<div><strong>Published:</strong><span class="year-published"></span></div>' +
+                            //'<div><strong>Publisher:</strong><span class="publisher"></span></div>' +
                             '<div><strong>Players:</strong><span class="players"></span></div>' +
                             '<div><strong>Time:</strong><span class="time"></span></div>' +
-                            '<div>' +
+                            '<div class="description-container">' +
                                 '<strong>Description:</strong> <br/>' +
                                 '<span class="description"></span>' +
                             '</div>' +
