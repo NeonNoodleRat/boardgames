@@ -1,0 +1,59 @@
+img:hover {
+    cursor: pointer;
+}
+
+.board-game-row {
+    padding-top: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+strong {
+    padding-right: 5px;
+}
+
+.board-game-row {
+    display: none;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.name-container {
+    max-width: 300px;
+}
+
+.username-search-container {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.filter-box-holder {
+    display: none;
+}
+
+.board-game-container {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.board-game-container:hover {
+    background-color: #DCDCDC;
+}
+
+.description-container {
+    max-width: 300px;
+}

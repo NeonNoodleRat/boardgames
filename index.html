@@ -6,114 +6,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-
-    <style>
-        img:hover {
-            cursor: pointer;
-        }
-
-        .board-game-row {
-            padding-top: 20px;
-        }
-
-        .hide {
-            display: none;
-        }
-
-        strong {
-            padding-right: 5px;
-        }
-
-        .filter-box-holder {
-            /* display: none; */
-        }
-
-        .board-game-row {
-            display: none;
-        }
-
-        .flex-container {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            justify-content: space-around;
-        }
-
-        .name-container {
-            max-width: 300px;
-        }
-
-        .username-search-container {
-            padding-bottom: 20px;
-            padding-top: 20px;
-        }
-
-        .filter-box-holder {
-            display: none;
-        }
-
-        .board-game-container {
-            padding-top: 20px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .board-game-container:hover {
-            background-color: #DCDCDC;
-        }
-
-        .description-container {
-            max-width: 300px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="site.css">
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <!-- <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Brand</a>
-          </div> -->
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
               <li><a href="#">Boardgames!</a></li>
-              <!-- <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li> -->
             </ul>
-            <!-- <form class="navbar-form navbar-left">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-              </div>
-            </form> -->
               </li>
             </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+          </div>
+        </div>
       </nav>
     
     <div class="container">
@@ -124,7 +28,6 @@
             Click an image to see more information.
         </div>
         <div class="username-search-container">
-          <!-- <label for="username-search">Username</label> -->
           <input type="text" id="username-search" placeholder="username">
           <button class="btn-username-search">Search</button>
         </div>
